@@ -497,13 +497,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Student WebRTC view HTML
     const studentMonitorHTML = `
         <div class="monitoring-card">
-            <div class="monitoring-video-container" style="background: rgba(0,255,100,0.02); height: 160px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 1px dashed var(--border-color);">
-                <div class="video-overlay-text" id="video-overlay-text" style="color: var(--text-secondary); text-align: center; padding: 16px; line-height: 1.4;">
-                    <span style="display: block; font-size: 24px; margin-bottom: 8px;">🛡️</span>
-                    <strong>Secure Exam Mode Active</strong><br>
-                    <span style="font-size: 11px; opacity: 0.8;">Camera & mic will stream to admin automatically in background.</span>
+            <div class="monitoring-video-container" style="position: relative; background: #000; height: 180px; display: flex; align-items: center; justify-content: center; border-radius: 16px; overflow: hidden; border: 1px solid var(--border-color);">
+                <video id="student-local-video" autoplay playsinline muted style="width: 100%; height: 100%; object-fit: cover; display: none; z-index: 1;"></video>
+                <div class="video-overlay-text" id="video-overlay-text" style="color: var(--text-secondary); text-align: center; padding: 16px; line-height: 1.4; z-index: 2;">
+                    <span style="display: block; font-size: 24px; margin-bottom: 8px;">📹</span>
+                    <strong>Camera & Microphone Off</strong><br>
+                    <span style="font-size: 11px; opacity: 0.8;">Click below to start standard proctoring feed.</span>
                 </div>
-                <span class="live-badge" id="live-badge">STEALTH STREAM ACTIVE</span>
+                <span class="live-badge" id="live-badge">PROCTORING ACTIVE</span>
             </div>
 
             <div class="monitoring-controls">
@@ -620,6 +621,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const toggleMonitorBtn = document.getElementById('toggle-monitor-btn');
         const liveBadge = document.getElementById('live-badge');
         const foregroundNotification = document.getElementById('foreground-notification');
+        const localVideo = document.getElementById('student-local-video');
+        const overlayText = document.getElementById('video-overlay-text');
 
         if (!toggleMonitorBtn) return;
 
@@ -629,12 +632,22 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleMonitorBtn.classList.add('secondary');
             if (liveBadge) liveBadge.classList.add('active');
             if (foregroundNotification) foregroundNotification.classList.add('active');
+            if (localVideo && localStream) {
+                localVideo.srcObject = localStream;
+                localVideo.style.display = 'block';
+            }
+            if (overlayText) overlayText.style.display = 'none';
         } else {
             toggleMonitorBtn.innerText = "Start WebRTC Broadcast";
             toggleMonitorBtn.classList.remove('secondary');
             toggleMonitorBtn.classList.add('primary');
             if (liveBadge) liveBadge.classList.remove('active');
             if (foregroundNotification) foregroundNotification.classList.remove('active');
+            if (localVideo) {
+                localVideo.srcObject = null;
+                localVideo.style.display = 'none';
+            }
+            if (overlayText) overlayText.style.display = 'block';
         }
 
         toggleMonitorBtn.addEventListener('click', async () => {
@@ -656,6 +669,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleMonitorBtn.classList.add('secondary');
                 if (liveBadge) liveBadge.classList.add('active');
                 if (foregroundNotification) foregroundNotification.classList.add('active');
+                if (localVideo && localStream) {
+                    localVideo.srcObject = localStream;
+                    localVideo.style.display = 'block';
+                }
+                if (overlayText) overlayText.style.display = 'none';
             } else {
                 isBroadcasting = false;
                 toggleMonitorBtn.innerText = "Start WebRTC Broadcast";
@@ -663,6 +681,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleMonitorBtn.classList.add('primary');
                 if (liveBadge) liveBadge.classList.remove('active');
                 if (foregroundNotification) foregroundNotification.classList.remove('active');
+                if (localVideo) {
+                    localVideo.srcObject = null;
+                    localVideo.style.display = 'none';
+                }
+                if (overlayText) overlayText.style.display = 'block';
             }
         });
     }
