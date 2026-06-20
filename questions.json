@@ -1,80 +1,2602 @@
 [
     {
-        "subject": "Physics",
-        "topic": "Electric Circuits",
-        "question": "What is the unit of electric current?",
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Spring Boot Actuator exposes operational information about running application using ______ endpoints.",
         "options": {
-            "A": "Volt",
-            "B": "Ohm",
-            "C": "Ampere",
-            "D": "Watt"
+            "A": "TCP",
+            "B": "HTTP",
+            "C": "IP",
+            "D": "FTP"
+        },
+        "correct": "B",
+        "explanation": "Spring Boot Actuator endpoints can be queried via standard HTTP requests (web ports) or JMX (Java Management Extensions) to monitor app health, metrics, and configurations.\n\n* *(A) TCP:* Too low-level. Actuator uses HTTP layer protocols.\n  * *(C) IP:* Network layer address, not an application communication endpoint.\n  * *(D) FTP:* Used for file transfer, not application monitoring."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Embedded C is:",
+        "options": {
+            "A": "ट्रेडीशनल C का एक सबसेट (A subset of traditional C)",
+            "B": "ट्रेडीशनल C का एक एक्सटेन्शन (An extension of traditional C)",
+            "C": "ट्रेडीशनल C का एक सुपरसेट (A superset of traditional C)",
+            "D": "ट्रेडीशनल C के समान है (Same as traditional C)"
+        },
+        "correct": "B",
+        "explanation": "Embedded C includes additional hardware-oriented features (like fixed-point arithmetic, multiple memory spaces, and basic I/O addressing) defined in ISO/IEC TR 18037.\n\n* *(A) Subset:* Subsets remove features. Embedded C adds register-level extensions.\n  * *(C) Superset:* A superset includes everything in traditional C plus more. Embedded C sometimes omits standard desktop libraries (like heavy `stdio.h` routines) due to constraints.\n  * *(D) Same:* False, standard C lacks microcontroller-specific keywords like `sbit` or `sfr`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "During embedded design, which design considers both hardware and software?",
+        "options": {
+            "A": "मेमोरी डिज़ाइन (Memory Design)",
+            "B": "सॉफ्टवेयर / हार्डवेयर डिज़ाइन (Software / hardware Design)",
+            "C": "प्लैटफार्म आधारित डिज़ाइन (Platform-based Design)",
+            "D": "पेरीफेरल डिज़ाइन (Peripheral Design)"
+        },
+        "correct": "B",
+        "explanation": "Hardware-Software Co-design simultaneously develops and evaluates hardware and software components to optimize system cost and performance.\n\n* *(A) Memory Design:* Focuses purely on RAM/ROM architectures.\n  * *(C) Platform-based Design:* Focuses on using pre-defined hardware layouts.\n  * *(D) Peripheral Design:* Deals with external interface circuits only."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "HC-05 is a Bluetooth module that can communicate in which mode?",
+        "options": {
+            "A": "सिंपलेक्स (Simplex)",
+            "B": "ड्यूपलेक्स (Duplex)",
+            "C": "फुल-ड्यूपलेक्स (Full-Duplex)",
+            "D": "इनमें से कोई नहीं (None of these)"
         },
         "correct": "C",
-        "explanation": "Ampere is the SI unit of electric current, defined as one coulomb of charge passing through a point in one second. Volt is for potential difference, Ohm for resistance, and Watt for power."
-    },
-    {
-        "subject": "Physics",
-        "topic": "Electric Circuits",
-        "question": "Which formula represents Ohm's Law?",
-        "options": {
-            "A": "P = VI",
-            "B": "V = IR",
-            "C": "R = V/I",
-            "D": "Q = It"
-        },
-        "correct": "B",
-        "explanation": "Ohm's Law states that the current through a conductor between two points is directly proportional to the voltage across the two points, which is mathematically represented as V = IR (Voltage = Current * Resistance)."
-    },
-    {
-        "subject": "Physics",
-        "topic": "Electric Circuits",
-        "question": "What device is used to measure electric current in a circuit?",
-        "options": {
-            "A": "Voltmeter",
-            "B": "Ammeter",
-            "C": "Ohmmeter",
-            "D": "Galvanometer"
-        },
-        "correct": "B",
-        "explanation": "An ammeter is connected in series in a circuit to measure the flow of electric current in amperes. A voltmeter measures voltage in parallel, and an ohmmeter measures electrical resistance."
+        "explanation": "The HC-05 module has separate RX (Receive) and TX (Transmit) lines, allowing it to send and receive data at the same time.\n\n* *(A) Simplex:* One-way communication only (e.g., Radio broadcasting).\n  * *(B) Duplex / Half-Duplex:* Two-way but only one device can transmit at a time (e.g., Walkie-talkie)."
     },
     {
         "subject": "Computer Science",
-        "topic": "Data Representation",
-        "question": "What is the binary representation of the decimal number 13?",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Sensor effectiveness depends on which of the following parameters?",
         "options": {
-            "A": "1100",
-            "B": "1101",
-            "C": "1011",
-            "D": "1111"
-        },
-        "correct": "B",
-        "explanation": "To convert 13 to binary: 13 / 2 = 6 remainder 1; 6 / 2 = 3 remainder 0; 3 / 2 = 1 remainder 1; 1 / 2 = 0 remainder 1. Reading the remainders from bottom to top, we get 1101."
-    },
-    {
-        "subject": "Computer Science",
-        "topic": "Data Representation",
-        "question": "Which of the following is a primary storage device?",
-        "options": {
-            "A": "Hard Disk Drive (HDD)",
-            "B": "Solid State Drive (SSD)",
-            "C": "Random Access Memory (RAM)",
-            "D": "USB Flash Drive"
+            "A": "रेडिएशन (Radiation)",
+            "B": "प्रतिरोधकता (Resistivity)",
+            "C": "संवेदनशीलता (Sensitivity)",
+            "D": "उपरोक्त सभी (All of the above)"
         },
         "correct": "C",
-        "explanation": "Random Access Memory (RAM) is primary storage because it is directly accessed by the CPU to read and write data during active operations. HDDs, SSDs, and USB drives are secondary storage."
+        "explanation": "Sensitivity represents the ratio of change in output to change in input. High sensitivity is the primary measure of a sensor's effectiveness.\n\n* *(A) Radiation:* Applies only to specific radiation sensors.\n  * *(B) Resistivity:* A material property, not a performance metric for all sensors."
     },
     {
         "subject": "Computer Science",
-        "topic": "Data Representation",
-        "question": "What is the hexadecimal equivalent of the binary number 10101111?",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is used to upload the Arduino Sketches to the board?",
         "options": {
-            "A": "AF",
-            "B": "9F",
-            "C": "A7",
-            "D": "BE"
+            "A": "avrgcc",
+            "B": "g++",
+            "C": "cpython",
+            "D": "avrdude"
+        },
+        "correct": "D",
+        "explanation": "`avrdude` (AVR Downloader Uploader) is the open-source software utility used to write compiled `.hex` files to the AVR microcontrollers (like ATmega328P).\n\n* *(A) avrgcc:* This is the compiler that translates C code to machine code.\n  * *(B) g++:* The standard GNU C++ compiler.\n  * *(C) cpython:* The default implementation of Python."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following process is used to keep track of user's activity?",
+        "options": {
+            "A": "औथेंटिकेशन (Authentication)",
+            "B": "आथरिंग (Authoring)",
+            "C": "आथराईजेशन (Authorization)",
+            "D": "अकाउंटिंग (Accounting)"
+        },
+        "correct": "D",
+        "explanation": "In AAA security (Authentication, Authorization, Accounting), Accounting tracks user logins, commands executed, and resource usage.\n\n* *(A) Authentication:* Verifies the identity of a user (logins/passwords).\n  * *(C) Authorization:* Assigns rights and permissions to a verified user."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "These applications take data or input from various devices and convert it into viable actions or clear patterns for human analysis:",
+        "options": {
+            "A": "रियल टाइम एनालिटिक्स (Real Time Analytics)",
+            "B": "डाटा कलेक्शन (Data Collection)",
+            "C": "डिवाइस इंटीग्रेशन (Device Integration)",
+            "D": "रियल टाइम कलेक्शन (Real Time Collection)"
         },
         "correct": "A",
-        "explanation": "Divide the 8-bit binary number into two 4-bit nibbles: 1010 and 1111. 1010 in decimal is 10, which is 'A' in hex. 1111 in decimal is 15, which is 'F' in hex. Together, they make AF."
+        "explanation": "Real-time analytics platforms process streaming IoT data instantly to trigger immediate actions or present trends.\n\n* *(B) Data Collection:* The process of merely gathering raw data.\n  * *(C) Device Integration:* Connecting hardware components together."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The actuators used in IoT applications are:",
+        "options": {
+            "A": "रिले (Relay)",
+            "B": "सर्वो मोटर्स (Servo Motors)",
+            "C": "डीसी मोटर्स (DC Motors)",
+            "D": "ये सभी (All of these)"
+        },
+        "correct": "D",
+        "explanation": "Relays (switching circuits), Servo Motors (precise angular shifts), and DC Motors (rotational force) are all devices that convert electrical energy to physical motion."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is used to capture data from the physical world in IoT devices?",
+        "options": {
+            "A": "सेंसर्स (Sensors)",
+            "B": "एक्यूएटर्स (Actuators)",
+            "C": "माइक्रो प्रोसेसर्स (Microprocessors)",
+            "D": "माइक्रोकंट्रोलर्स (Microcontrollers)"
+        },
+        "correct": "A",
+        "explanation": "Sensors measure physical properties (temperature, light) and output readable electrical values.\n\n* *(B) Actuators:* Actuators act on the physical world (motors, pumps).\n  * *(C)/(D) Microprocessors/Controllers:* They process the captured data."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which one is the most discussed challenge in IoT?",
+        "options": {
+            "A": "स्टैण्डर्ड (Standard)",
+            "B": "सुरक्षा (Security)",
+            "C": "विनियमन (Regulation)",
+            "D": "इन्टरनेट (Internet)"
+        },
+        "correct": "B",
+        "explanation": "With billions of smart devices collecting sensitive data, security and data privacy are the biggest concerns."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The IoT networks that has a very short range is:",
+        "options": {
+            "A": "WAN",
+            "B": "LAN",
+            "C": "Fox",
+            "D": "शॉर्ट-रेंज वायरलेस नेटवर्क (Short-range Wireless Network)"
+        },
+        "correct": "D",
+        "explanation": "Examples include Bluetooth, NFC, and Zigbee, which operate over short distances (centimeters to meters).\n\n* *(A) WAN:* Wide Area Network (long range)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Major Component of IoT is/are:",
+        "options": {
+            "A": "सेंसर्स (Sensors)",
+            "B": "एक्चुएटर्स (Actuators)",
+            "C": "स्मार्ट एप्लिरेशन्स् (Smart Applications)",
+            "D": "उपरोक्त सभी (All of the Above)"
+        },
+        "correct": "D",
+        "explanation": "Sensors (to gather data), Actuators (to perform actions), and Smart Applications (to compile logic) form the end-to-end IoT pipeline."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "In the IoT network, Secure Shell (SSH) is:",
+        "options": {
+            "A": "गेटवे (Gateway)",
+            "B": "सिक्योर नेटवर्क प्रोटोकॉल (Secure network protocol)",
+            "C": "राउटर (Router)",
+            "D": "फायरवाल (Firewall)"
+        },
+        "correct": "B",
+        "explanation": "SSH is a cryptographic protocol used to run commands and securely access remote operating systems over unsecured networks."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The advantages of using functions is:",
+        "options": {
+            "A": "बड़े कार्य को छोटे कार्यों में विभाजित करना (Partition larger task into smaller tasks)",
+            "B": "कोड पुनः प्रयोज्य (Code reusability)",
+            "C": "जटिलता का प्रबंधन (Manage complexity)",
+            "D": "इनमें से सभी (All of these)"
+        },
+        "correct": "D",
+        "explanation": "Functions partition tasks into manageable blocks, promote code reuse, and simplify code debugging."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How should the tone of a speaker be like?",
+        "options": {
+            "A": "ऊँचा (Loud)",
+            "B": "स्पष्ट (Clear)",
+            "C": "नीचा (Low)",
+            "D": "संयत (Soft)"
+        },
+        "correct": "B",
+        "explanation": "Clarity ensures the listener understands the pronunciation, words, and context easily.\n\n* *(A) Loud:* Can seem aggressive or rude.\n  * *(D) Soft:* May not carry across the room."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "______ is a combination of hardware and software to perform a specific task.",
+        "options": {
+            "A": "IoT सिस्टम (IoT System)",
+            "B": "एम्बेडेड सिस्टम (Embedded System)",
+            "C": "ग्रिड सिस्टम (Grid System)",
+            "D": "क्लाउड सिस्टम (Cloud System)"
+        },
+        "correct": "B",
+        "explanation": "Embedded systems are dedicated controllers designed with microprocessors/controllers running custom firmware to execute a single targeted task."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What indicates to the reader the purpose of a letter?",
+        "options": {
+            "A": "विषय (Subject)",
+            "B": "प्रधान भाग (Body)",
+            "C": "पता (Address)",
+            "D": "अभिवादन (Salutation)"
+        },
+        "correct": "A",
+        "explanation": "The subject line summarizes the entire letter's intent in one short line."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which processor helps in carrying out floating point calculations?",
+        "options": {
+            "A": "माइक्रोप्रोसेसर (microprocessor)",
+            "B": "कोप्रोसेसर (coprocessor)",
+            "C": "माइक्रो कंट्रोलर (microcontroller)",
+            "D": "कंट्रोलर (controller)"
+        },
+        "correct": "B",
+        "explanation": "A coprocessor (e.g., FPU - Floating Point Unit) assists the main CPU in executing advanced math instructions."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How to research and enquire about the company?",
+        "options": {
+            "A": "वेबसाइट (Website)",
+            "B": "कंपनी निर्देशिकाएं (Company Directories)",
+            "C": "वार्षिक रिपोर्ट (Annual Report)",
+            "D": "ये सभी (All of these)"
+        },
+        "correct": "D",
+        "explanation": "Examining websites, industry directories, and official annual reports provides a complete background of a company's status."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What will be the output of the following Arduino code?",
+        "options": {
+            "A": "",
+            "B": "8",
+            "C": "null",
+            "D": "23"
+        },
+        "correct": "B",
+        "explanation": "Due to type promotion rules in C, adding an `int` to a `double` promotes the expression's type to `double`. The size of a `double` is 8 bytes on standard compiler architectures. On standard AVR microcontrollers (like Uno), `double` is equivalent to a 4-byte `float`. The closest answer option listed is **8**."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is false about IoT devices?",
+        "options": {
+            "A": "डेटा एकत्र करने और साझा करने के लिए इंटरनेट का उपयोग करता है (Use internet for collecting and sharing data)",
+            "B": "माइक्रोकंट्रोलर की आवश्यकता होती है (Need microcontrollers)",
+            "C": "वायरलेस तकनीक का प्रयोग करता है (Use wireless technology)",
+            "D": "पूरी तरह सुरक्षित हैं (Are completely safe)"
+        },
+        "correct": "D",
+        "explanation": "IoT devices are often target to cyber-attacks due to lack of update paths and weak built-in security, so they are not completely safe."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the feeling of competence to cope with life's challenges and of being worthy of happiness called?",
+        "options": {
+            "A": "अभिमान (Arrogance)",
+            "B": "आत्म-सम्मान (Self-esteem)",
+            "C": "आत्म-प्रभावकारिता (Self-efficacy)",
+            "D": "इच्छाकल्पित चिन्तन (Wishful thinking)"
+        },
+        "correct": "B",
+        "explanation": "Self-esteem measures self-worth and confidence in one's capability to survive and thrive.\n\n* *(C) Self-efficacy:* Focuses only on your belief to complete specific tasks, not general happiness."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What type of speaker looks into the eyes of the audience?",
+        "options": {
+            "A": "आश्वस्त (Confident)",
+            "B": "असहिष्णु (Impatient)",
+            "C": "अशिष्ट (Rude)",
+            "D": "गंवार (Impolite)"
+        },
+        "correct": "A",
+        "explanation": "Regular eye contact establishes authority and projects confidence."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "LDR sensor works on the principle of:",
+        "options": {
+            "A": "और",
+            "B": "फोटोकॉन्डक्टिविटी (Photoconductivity)",
+            "C": "दोनों (Both A and C)",
+            "D": ""
+        },
+        "correct": "B",
+        "explanation": "An LDR (Light Dependent Resistor) changes its electrical resistance based on the number of photons hitting its surface, illustrating photoconductivity."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "______ is heart of Computer system.",
+        "options": {
+            "A": "मेमोरी (Memory)",
+            "B": "आई/ओ (I/O)",
+            "C": "काउंटर (Counter)",
+            "D": "प्रॉसेसर (Processor)"
+        },
+        "correct": "D",
+        "explanation": "The CPU/Processor fetches, decodes, and executes all program instructions."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "______ allow data processing close to device.",
+        "options": {
+            "A": "एज कम्प्यूटिंग (Edge Computing)",
+            "B": "क्लाउड कम्प्यूटिंग (Cloud Computing)",
+            "C": "फॉग कम्प्यूटिंग (Fog Computing)",
+            "D": "ग्रिड कम्प्यूटिंग (Grid Computing)"
+        },
+        "correct": "A",
+        "explanation": "Edge computing performs analytical processing at the edge node (gateway or device) to save cloud bandwidth and latency."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "TCP stands for:",
+        "options": {
+            "A": "ट्रांसमिशन कंट्रोल प्रोटोकॉल (Transmission Control Protocol)",
+            "B": "टेलीकम्यूनिकेशन कंट्रोल प्रोटोकॉल (Telecommunication Control Protocol)",
+            "C": "टेम्परेचर कंट्रोल प्रोटोकॉल (Temperature Control Protocol)",
+            "D": "ट्रांसमिशन एंड कम्युनिकेशन प्रोटोकॉल (Transmission and Communication Protocol)"
+        },
+        "correct": "A",
+        "explanation": "TCP is the core connection-oriented protocol that handles packet ordering and delivery verification on the internet."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What will be the output of the following code?",
+        "options": {
+            "A": "12",
+            "B": "15",
+            "C": "17",
+            "D": "20"
+        },
+        "correct": "C",
+        "explanation": "Under standard compiler evaluations:\n  1. `b++` evaluates to `4` (post-increment, `b` increments to `5` afterwards).\n  2. `++b` increments `b` to `6` and evaluates to `6`.\n  3. `++b` increments `b` to `7` and evaluates to `7`.\n  4. `res = 4 + 6 + 7 = 17`.\n  *(Note: Standard C flags multiple mutations within one statement as Undefined Behavior, but GCC compilers resolve it to 17).*"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is the key to an effective presentation?",
+        "options": {
+            "A": "Option A",
+            "B": "Option B",
+            "C": "Option C",
+            "D": "Option D"
+        },
+        "correct": "C",
+        "explanation": "Using slides only for major bullets keeps the audience focused on the speaker instead of reading walls of text."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the number of elements in open IoT architecture?",
+        "options": {
+            "A": "चार (Four)",
+            "B": "पाँच (Five)",
+            "C": "छह (Six)",
+            "D": "सात (Seven)"
+        },
+        "correct": "D",
+        "explanation": "The standard Open IoT architecture has 7 layers: Device/Physical, Network, Gateway, Middleware/Cloud, Application, Analytics, and Security."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is the basic functions of a timer?",
+        "options": {
+            "A": "कंपेयर, कैप्चर मोड को नियंत्रित करना (Control the compare, capture mode)",
+            "B": "काउंटर के रूप में कार्य (Act as a counter)",
+            "C": "समय-विलंब प्रदान करना (Provide a time delay)",
+            "D": "ये सभी (All of the above)"
+        },
+        "correct": "D",
+        "explanation": "Microcontroller timers serve multiple functions: generating time delays, capturing signal pulses, and acting as event counters."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which type of variables are retained for use throughout the program in RAM and not reallocated during program execution?",
+        "options": {
+            "A": "ऑटोमेटिक (Automatic)",
+            "B": "स्टेटिक (Static)",
+            "C": "डायनामिक (Dynamic)",
+            "D": "इनमें से सभी (All of these)"
+        },
+        "correct": "B",
+        "explanation": "`static` variables retain their value across function calls and exist in memory for the program's entire runtime."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What are the major categories of communications?",
+        "options": {
+            "A": "भाषण, लेखन (Speech, writing)",
+            "B": "मुद्रण (Printing)",
+            "C": "इलेक्ट्रॉनिक संचार (Electronic communication)",
+            "D": "उपरोक्त सभी (All of these)"
+        },
+        "correct": "D",
+        "explanation": "Verbal speech, print, and electronic tools are all valid categories of messaging systems."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of these may convey arrogance?",
+        "options": {
+            "A": "कंधे उचकाना (Shoulder shrug)",
+            "B": "संयुक्त उँगलियाँ (Jointed fingertips)",
+            "C": "ढीले झूलते हुए हाथ (Hands swinging loosely)",
+            "D": "उँगली दिखाना (Pointed finger)"
+        },
+        "correct": "D",
+        "explanation": "Pointing a finger at a listener is a directive gesture that signifies dominance or aggression."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following prevents someone from denying the accessed resource?",
+        "options": {
+            "A": "अकाउंटिंग (Accounting)",
+            "B": "नॉन-रेपुडिएशन (Non-repudiation)",
+            "C": "स्निफिंग (Sniffing)",
+            "D": "आथराईजेशन (Authorization)"
+        },
+        "correct": "B",
+        "explanation": "Non-repudiation ensures a sender or receiver cannot deny having processed or sent a transaction."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the size of RAM memory in 8051?",
+        "options": {
+            "A": "32 बाइट्स (32 bytes)",
+            "B": "64 बाइट्स (64 bytes)",
+            "C": "128 बाइट्स (128 bytes)",
+            "D": "256 बाइट्स (256 bytes)"
+        },
+        "correct": "C",
+        "explanation": "The standard Intel 8051 has 128 bytes of internal scratchpad RAM."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the objective of the code given below if it is executed on the Arduino Uno?",
+        "options": {
+            "A": "Clear EEPROM",
+            "B": "Fill EEPROM with 1's",
+            "C": "Export EEPROM data",
+            "D": "Fill EEPROM with 0's"
+        },
+        "correct": "B",
+        "explanation": "The loop writes a value of `1` to every address position from `0` to the end of EEPROM memory before halting."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is NOT a data type?",
+        "options": {
+            "A": "sbit",
+            "B": "dbit",
+            "C": "bit",
+            "D": "unsigned int"
+        },
+        "correct": "B",
+        "explanation": "There is no `dbit` keyword in Keil C51 or C.\n\n* *(A) sbit:* Special Bit definition in Keil.\n  * *(C) bit:* Standard 1-bit type."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What will be the output of the following code?",
+        "options": {
+            "A": "5",
+            "B": "20",
+            "C": "40",
+            "D": "10"
+        },
+        "correct": "D",
+        "explanation": "The character conversions are calculated using ASCII relative offsets:\n  * `'a' - 'a' = 0`\n  * `'b' - 'a' = 1`\n  * `'c' - 'a' = 2`\n  * `'d' - 'a' = 3`\n  * `'e' - 'a' = 4`\n  * `Sum = 0 + 1 + 2 + 3 + 4 = 10`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Predict the output of the following code if the object is moving towards the sensor.",
+        "options": {
+            "A": "clear+clear+1+1",
+            "B": "1+1+clear+1",
+            "C": "1+1+clear+clear",
+            "D": "clear+clear+clear+clear"
+        },
+        "correct": "A",
+        "explanation": "Active IR obstacle sensors output `HIGH` when clear and switch to `LOW` when an object is detected. An object moving closer causes a transition from \"clear\" (HIGH) to \"barrier\" (LOW, which prints `1+`)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How many analog pins are used in Arduino Mega board?",
+        "options": {
+            "A": "12",
+            "B": "16",
+            "C": "8",
+            "D": "14"
+        },
+        "correct": "B",
+        "explanation": "The Arduino Mega 2560 has 16 analog input pins, labeled A0 through A15."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How are comments denoted in Embedded C?",
+        "options": {
+            "A": "#",
+            "B": "%",
+            "C": ";",
+            "D": "//"
+        },
+        "correct": "D",
+        "explanation": "* **Correct Answer:** **(D) //** (for single-line comments)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The stress management technique based on mental exercises which produces the relaxation response:",
+        "options": {
+            "A": "ऑटोजेनिक तकनीक (Autogenic Technique)",
+            "B": "खान-पान (Eating)",
+            "C": "नींद (Sleeping)",
+            "D": "दवा का सेवन (Medicine intake)"
+        },
+        "correct": "A",
+        "explanation": "Autogenic training involves visual imagery and body awareness to reduce stress."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "IoT devices can easily lead to catastrophe without ______",
+        "options": {
+            "A": "सॉफ्टवेयर (Software)",
+            "B": "डिवाइस (Devices)",
+            "C": "क्लाउड (Cloud)",
+            "D": "मैनेजमेंट सिस्टम (Management system)"
+        },
+        "correct": "D",
+        "explanation": "A robust management system handles software updates and monitors failures to prevent critical device crashes."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of these does not enhance listening skills?",
+        "options": {
+            "A": "ध्यान (Attention)",
+            "B": "स्पष्ट धारणा (Clear perception)",
+            "C": "स्पष्टवादिता (Frankness)",
+            "D": "उपेक्षा करना (Ignoring)"
+        },
+        "correct": "D",
+        "explanation": "Ignoring the speaker breaks active communication."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following must be present in a microcontroller?",
+        "options": {
+            "A": "CPU, ROM, I/O पोर्ट्स और टाइमर्स (CPU, ROM, I/O ports and timers)",
+            "B": "RAM, ROM, I/O पोर्ट्स और टाइमर्स (RAM, ROM, I/O ports and timers)",
+            "C": "CPU, RAM, I/O पोर्ट्स और टाइमर्स (CPU, RAM, I/O ports and timers)",
+            "D": "CPU, RAM, ROM I/O पोर्ट्स और टाइमर्स (CPU, RAM, ROM, I/O ports and timers)"
+        },
+        "correct": "D",
+        "explanation": "A microcontroller consolidates all computer hardware elements onto a single integrated chip."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How power supply is done to Raspberry Pi?",
+        "options": {
+            "A": "यूएसबी कनेक्शन (USB connection)",
+            "B": "इंटरनल बैटरी (Internal battery)",
+            "C": "चार्जर (Charger)",
+            "D": "अडाप्टर (Adapter)"
+        },
+        "correct": "A",
+        "explanation": "The Raspberry Pi uses standard micro-USB or USB-C inputs for its 5V power needs."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Identify the polite method of beginning a business letter.",
+        "options": {
+            "A": "हम अस्वीकृत करने को बाध्य हैं (We are forced to refuse)",
+            "B": "हम आपसे जानना चाहते हैं (We demand to know from you)",
+            "C": "हमें यह समझने में कठिन प्रतीत हो रहा है (We find it difficult to believe)",
+            "D": "हम आपके शीघ्र उत्तर की सराहना करते हैं (We appreciate your prompt reply)"
+        },
+        "correct": "D",
+        "explanation": "Opening with appreciation establishes a positive professional tone."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "MQ-135 is a type of ______",
+        "options": {
+            "A": "हयूमीडिटी सेंसर (Humidity sensor)",
+            "B": "गैस सेंसर (Gas sensor)",
+            "C": "लाइट सेंसर (Light sensor)",
+            "D": "टेम्परेचर सेंसर (Temperature sensor)"
+        },
+        "correct": "B",
+        "explanation": "The MQ-135 sensor is used for monitoring air quality by detecting harmful gases."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is an established set of rules that determines how data is transmitted between different device in the same network?",
+        "options": {
+            "A": "नेटवर्क कनेक्शन (Network connection)",
+            "B": "टीसीपी आईपी प्रोटोकॉल (TCP IP protocol)",
+            "C": "नेटवर्क प्रोटोकॉल (Network protocol)",
+            "D": "टीसीपी प्रोटोकॉल (TCP protocol)"
+        },
+        "correct": "C",
+        "explanation": "Network protocols govern communication formatting and connection setup rules across devices."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the resolution of the micros() function on the Arduino Nano?",
+        "options": {
+            "A": "7 माइक्रोसेकेंड (7 Microseconds)",
+            "B": "4 माइक्रोसेकेंड (4 Microseconds)",
+            "C": "6 माइक्रोसेकेंड (6 Microseconds)",
+            "D": "2 माइक्रोसेकेंड (2 Microseconds)"
+        },
+        "correct": "B",
+        "explanation": "The `micros()` function on a 16MHz Arduino clock has a resolution step size of 4 microseconds."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the process to check whether previous stages of reading have been followed properly?",
+        "options": {
+            "A": "अवलोकन (Survey)",
+            "B": "प्रश्न (Question)",
+            "C": "वाचन (Reading)",
+            "D": "पुनरावलोकन (Review)"
+        },
+        "correct": "D",
+        "explanation": "In the SQ3R study system, Reviewing verifies comprehension of the reading material."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The scope that hacker can use to break into a system is called as:",
+        "options": {
+            "A": "अटैक सर्फेस (Attack surface)",
+            "B": "डिफेंस (Defense)",
+            "C": "प्रिंसिपल ऑफ लीस्ट प्रीवीलेज (Principle of least privilege)",
+            "D": "रिस्क मिटीगेशन (Risk mitigation)"
+        },
+        "correct": "A",
+        "explanation": "An attack surface consists of all open ports, features, and interface points exposed to exploit attempts."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The process of removing certain band of frequencies from a signal while permitting other is called as:",
+        "options": {
+            "A": "अटेनुएशन (Attenuation)",
+            "B": "डिस्टार्शन (Distortion)",
+            "C": "फिल्टरिंग (Filtering)",
+            "D": "उपरोक्त में से कोई नहीं (None of the above)"
+        },
+        "correct": "C",
+        "explanation": "Filters block specified frequency ranges (low, high, or band) to clean signal inputs."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which memory storage is widely used in Embedded Systems?",
+        "options": {
+            "A": "EEPROM",
+            "B": "DRAM",
+            "C": "फ्लैश मेमोरी (Flash memory)",
+            "D": "SRAM"
+        },
+        "correct": "C",
+        "explanation": "Flash memory retains code when powered down and allows easy firmware updates."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How are multiline comments denoted in Embedded C?",
+        "options": {
+            "A": "##",
+            "B": "//",
+            "C": "%%",
+            "D": "//"
+        },
+        "correct": "",
+        "explanation": "* **Correct Answer:** The question options display a typo (`//` printed twice). The standard C syntax for multiline comments is `/* ... */`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the use of the IR Sensor?",
+        "options": {
+            "A": "आर्द्रता का पता लगाने के लिए (Humidity Detection)",
+            "B": "इमेज प्रोसेसिंग (Image Processing)",
+            "C": "ऑब्जेक्ट का पता लगाने के लिए (Object Detection)",
+            "D": "GPS"
+        },
+        "correct": "C",
+        "explanation": "IR sensors detect reflections from obstacles to determine object presence."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the output of the following program?",
+        "options": {
+            "A": "एरर (Error)",
+            "B": "और",
+            "C": "दोनों (Both B and C)",
+            "D": ""
+        },
+        "correct": "D",
+        "explanation": "The `for(;;)` structure omits condition arguments, creating an infinite loop that runs the statements forever."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "When we use many devices on the same network, which of the following challenge arises?",
+        "options": {
+            "A": "सिग्नलिंग (Signaling)",
+            "B": "सिक्योरिटी (Security)",
+            "C": "पावर डिटेक्शन (Power Detection)",
+            "D": "ऊर्जा खपत (Power Consumption)"
+        },
+        "correct": "A",
+        "explanation": "High density of connected devices generates massive signaling traffic, leading to collision and congestion."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How many times does the setup() function run on every startup of the Arduino System?",
+        "options": {
+            "A": "4",
+            "B": "5",
+            "C": "2",
+            "D": "1"
+        },
+        "correct": "D",
+        "explanation": "Arduino architecture calls `setup()` exactly once at boot time."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "An IoT network is a collection of ______ devices.",
+        "options": {
+            "A": "सिग्नल (Signal)",
+            "B": "मशीन से मशीन (Machine to machine)",
+            "C": "इंटरकनेक्टेड (Interconnected)",
+            "D": "नेटवर्क (Network)"
+        },
+        "correct": "C",
+        "explanation": "IoT relies on connecting multiple embedded systems together to share data."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "______ is meant for a specific group of people while ______ may be aimed for the general public.",
+        "options": {
+            "A": "सर्कुलर, नोटिस (circular, notice)",
+            "B": "नोटिस, मेमो (notice, memo)",
+            "C": "नोटिस, सर्कुलर (notice, circular)",
+            "D": "मेमो, सर्कुलर (memo, circular)"
+        },
+        "correct": "A",
+        "explanation": "Circulars are distributed internally within an office, while notices are posted on public boards."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The main objective of WoT (Web of Things) is:",
+        "options": {
+            "A": "उपयोगिता और अंतः क्रियाशीलता में सुधार (Improve usability and interoperability)",
+            "B": "सुरक्षा को घटाना (Reduce the security)",
+            "C": "विकास को जटिल बनाना (Complicate the development)",
+            "D": "लागत को बढ़ाना (Increase the cost)"
+        },
+        "correct": "A",
+        "explanation": "WoT integrates web APIs (REST, WebSockets) with IoT devices to simplify device communication."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Most sensors have what type of transfer function?",
+        "options": {
+            "A": "जीरो (Zero)",
+            "B": "इंफीनिटी (Infinity)",
+            "C": "लिनियर (Linear)",
+            "D": "नॉन-लिनियर (Non-linear)"
+        },
+        "correct": "D",
+        "explanation": "Physical sensors rarely exhibit perfect linear responses across their entire operating range."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "In IoT, Transport layer set up connections without handshakes/acknowledgements using:",
+        "options": {
+            "A": "यूडीपी (UDP)",
+            "B": "टीसीपी (TCP)",
+            "C": "एफटीपी (FTP)",
+            "D": "एचटीटीपी (HTTP)"
+        },
+        "correct": "A",
+        "explanation": "User Datagram Protocol (UDP) is connectionless and does not require handshakes, minimizing transmission overhead."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Mr. Rahul is seeking feedback after completing and implementing his project. This act represents:",
+        "options": {
+            "A": "समय-प्रबंधन (Time-Management)",
+            "B": "आत्म-जागरूकता (Self-Awareness)",
+            "C": "कृतज्ञता (Gratitude)",
+            "D": "आत्म-प्रेम (Self-Love)"
+        },
+        "correct": "B",
+        "explanation": "Seeking constructive criticism shows self-awareness and a commitment to personal growth."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "How can you throw an error with preprocessor directives to Arduino Compiler, forcing to stop compilation?",
+        "options": {
+            "A": "#warning",
+            "B": "#stop",
+            "C": "#cut",
+            "D": "#error"
+        },
+        "correct": "D",
+        "explanation": "The `#error` directive halts compilation and prints the custom error text to the compiler console."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "If 1 means an object is detected and 0 meaning no object is detected, then considering the sensor stationary, what can be the possible movement of object if the output by the sensor is observed as 111000?",
+        "options": {
+            "A": "ऑब्जेक्ट स्थिर है (Object is stationary)",
+            "B": "ऑब्जेक्ट अगल-बगल हिल रहा है (Object is oscillating side by side)",
+            "C": "ऑब्जेक्ट दूर जा रहा है (Object is moving away)",
+            "D": "ऑब्जेक्ट नजदीक आ रहा है (Object is moving closer)"
+        },
+        "correct": "C",
+        "explanation": "The sensor first detects the object (`111`), but as the object moves out of detection range, the values change to `000`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The process of assessment of the speaker's content while listening is called ______",
+        "options": {
+            "A": "गंभीर श्रवण (Critical listening)",
+            "B": "संवाद श्रवण (Dialogic listening)",
+            "C": "व्यापक श्रवण (Comprehensive listening)",
+            "D": "व्यवस्थित श्रवण (Systematic listening)"
+        },
+        "correct": "A",
+        "explanation": "Critical listening involves active evaluation of the logic, credibility, and facts of a message."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the bit size used in 8051?",
+        "options": {
+            "A": "4-बिट (4-bit)",
+            "B": "8-बिट (8-bit)",
+            "C": "16-बिट (16-bit)",
+            "D": "32-बिट (32-bit)"
+        },
+        "correct": "B",
+        "explanation": "The 8051 is historically designed as an 8-bit microprocessing controller."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the outcome of the following Arduino code?",
+        "options": {
+            "A": "Send a signal to pin 20 on the Arduino board",
+            "B": "Send a octal number of 20 through the Serial pins",
+            "C": "Send a byte with value 20 through the Serial pins",
+            "D": "Send a hexadecimal number of 20 through the Serial pins"
+        },
+        "correct": "C",
+        "explanation": "`Serial.write()` transmits raw binary data (one byte) rather than readable ASCII text characters."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is Arduino?",
+        "options": {
+            "A": "प्रोग्रामिंग भाषा (Programming language)",
+            "B": "इमेज एडिटिंग सॉफ्टवेयर (Image editing software)",
+            "C": "ओपन-सोर्स इलेक्ट्रॉनिक्स प्लैटफार्म (Open-source electronics platform)",
+            "D": "टेक्स्ट एडिटर (Text editor)"
+        },
+        "correct": "C",
+        "explanation": "Arduino consists of open-source circuit boards and an IDE for writing code."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which one is not Leading Cloud Services for IoT Deployments?",
+        "options": {
+            "A": "AWS",
+            "B": "आईबीएम वॉटसन (IBM Watson)",
+            "C": "माइक्रोसॉफ़्ट एज्योर (Microsoft Azure)",
+            "D": "गूगल ड्राइव (Google Drive)"
+        },
+        "correct": "D",
+        "explanation": "Google Drive is for storing personal files, not an IoT broker platform like AWS IoT or Azure IoT."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the correct execution process of an Arduino code?",
+        "options": {
+            "A": "प्रीप्रोसेसर-> एडिटर-> कंपाइलर (Preprocessor->Editor->Compiler)",
+            "B": "एडिटर-> प्रीप्रोसेसर-> कंपाइलर (Editor->Preprocessor->Compiler)",
+            "C": "कंपाइलर-> प्रीप्रोसेसर-> एडिटर (Compiler->Preprocessor->Editor)",
+            "D": "एडिटर-> कंपाइलर-> प्रीप्रोसेसर (Editor->Compiler->Preprocessor)"
+        },
+        "correct": "B",
+        "explanation": "You write code in the Editor, the Preprocessor handles header expansion, and the Compiler translates it into binary."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which one is not a control structure?",
+        "options": {
+            "A": "While",
+            "B": "If..else",
+            "C": "#define",
+            "D": "Case"
+        },
+        "correct": "C",
+        "explanation": "`#define` is a preprocessor macro substitution rule, not a runtime flow control structure."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "IoT and cloud computing has what kind of relationship?",
+        "options": {
+            "A": "फ़िज़िकल (Physical)",
+            "B": "कांप्लीमेंट्री (Complementary)",
+            "C": "ग्राफिकल (Graphical)",
+            "D": "कोडिंग (Coding)"
+        },
+        "correct": "B",
+        "explanation": "Cloud provides the database scaling and analysis power that resource-constrained IoT devices lack."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which one of these is not threat modelling methodology?",
+        "options": {
+            "A": "NANO",
+            "B": "STRIDE",
+            "C": "OCTAVE",
+            "D": "PASTA"
+        },
+        "correct": "A",
+        "explanation": "STRIDE, OCTAVE, and PASTA are standard security threat frameworks. NANO is not."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Predict the output of the following code if the object is moving away from the sensor:",
+        "options": {
+            "A": "clear+clear+1+1",
+            "B": "1+1+clear+clear",
+            "C": "clear+clear+clear+clear",
+            "D": "1+1+clear+1"
+        },
+        "correct": "B",
+        "explanation": "An object starting close triggers detection (`LOW`, which prints `1+`). As it moves away, the signal switches back to clear (`HIGH`, which prints `clear+`)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What type of signal does the analogWrite() function output?",
+        "options": {
+            "A": "पल्स कोड मॉड्यूलेटेड सिग्नल (Pulse Code Modulated Signal)",
+            "B": "फ्रिक्वेन्सी मॉड्यूलेटेड सिग्नल (Frequency Modulated Signal)",
+            "C": "पल्स विड्थ मॉड्यूलेटेड सिग्नल (Pulse Width Modulated Signal)",
+            "D": "पल्स एम्प्लिट्यूड मॉड्यूलेटेड सिग्नल (Pulse Amplitude Modulated Signal)"
+        },
+        "correct": "C",
+        "explanation": "`analogWrite()` toggles the output pin state at a high frequency to generate a PWM wave, simulating analog voltage."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following devices are specifically being used for converting serial to parallel and from parallel to serial respectively?",
+        "options": {
+            "A": "माइक्रोकंट्रोलर (microcontroller)",
+            "B": "टाइमर्स (timers)",
+            "C": "काउंटर्स (counters)",
+            "D": "रजिस्टर्स (registers)"
+        },
+        "correct": "D",
+        "explanation": "Shift registers convert parallel inputs to serial lines and vice versa."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The Atmega 168 is an ______ bit chip.",
+        "options": {
+            "A": "32",
+            "B": "64",
+            "C": "8",
+            "D": "16"
+        },
+        "correct": "C",
+        "explanation": "The ATmega168 microcontroller belongs to the 8-bit AVR microcontrollers family."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the use of the Interrupt Service Routine in an Arduino?",
+        "options": {
+            "A": "अर्दूइनों को बूट-अप करने के लिए (To boot up the Arduino)",
+            "B": "रनिंग कोड से एक्ज़िट करने के लिए (To exit any code that is running)",
+            "C": "फंक्शन्स को ऑटोमेट करने के लिए (To automate functions)",
+            "D": "अधिक मेमोरी बनाना (To make more memory)"
+        },
+        "correct": "B",
+        "explanation": "An ISR runs immediately when an interrupt occurs, temporarily pausing the main execution loop to handle the time-critical event."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the effect of performing AND operation of R with 0xFE?",
+        "options": {
+            "A": "R का एक सेलेक्टेड बिट सेट करना (Setting a selected bit of R)",
+            "B": "R के सेलेक्टेड बिट को क्लियर करना (Clearing a selected bit of R)",
+            "C": "R के सेलेक्टेड बिट को कॉम्प्लिमेंट करना (Complement selected bit of R)",
+            "D": "इनमें से कोई नहीं (None of these)"
+        },
+        "correct": "B",
+        "explanation": "`0xFE` in binary is `11111110`. ANDing a register with `0xFE` forces the least significant bit (LSB) to `0` while leaving the other bits unchanged."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What are the functions preprocessor directive in Embedded C programming?",
+        "options": {
+            "A": "कंपाइलर को बताना कि प्रोग्राम में मौजूद सिंबल्स को कहाँ खोजें (Tell compiler where to find symbols that are not present in program)",
+            "B": "प्रोग्राम को कंपाइल करने के लिए कंपाइलर को निर्देश देना (Give compiler instructions to compile the program)",
+            "C": "डिफ़ाइन वैरिएबल्स (Define variables)",
+            "D": "डिफ़ाइन फंक्शन्स (Define functions)"
+        },
+        "correct": "B",
+        "explanation": "Preprocessor directives instruct the compiler to perform macro expansions, file inclusions, and conditional compiles."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "A good presenter and communicator should:",
+        "options": {
+            "A": "विचारों की अच्छे अनुक्रमण का पालन (Follow good sequencing of ideas)",
+            "B": "समय का उचित प्रबंधन (Manage time properly)",
+            "C": "शंकाओं का निवारण (Clear doubts)",
+            "D": "ये सभी (All of these)"
+        },
+        "correct": "D",
+        "explanation": "* **Correct Answer:** **(D) All of these**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following is the property of embedded C language?",
+        "options": {
+            "A": "हार्डवेयर इंडिपेंडेंट (Hardware independent)",
+            "B": "वेब एप्लिकेशन्स के लिए उपयोग किया जाता है (Used for web applications)",
+            "C": "सीमित संसाधनों के साथ उपयोग किया जाता है (Used with limited resources)",
+            "D": "नेटिव डेवलपमेंट के लिए प्रयुक्त (Used for native development)"
+        },
+        "correct": "C",
+        "explanation": "Embedded C features minimal runtime overhead, making it ideal for microcontrollers with restricted memory."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Using lecturers and handouts, information is acquired via ______ whereas by using tutorials and conversations, information is acquired through ______",
+        "options": {
+            "A": "छात्र, शिक्षक (Students, tutors)",
+            "B": "अन्य स्रोत, शिक्षक (Other sources, tutors)",
+            "C": "शिक्षक, साथी शिक्षार्थी (Tutors, fellow learners)",
+            "D": "उपरोक्त में से कोई नहीं (None of the above)"
+        },
+        "correct": "C",
+        "explanation": "Lectures/handouts deliver tutor-centric structured data, whereas tutorials/conversations promote group learning."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the efficiency of the DC motor at maximum power?",
+        "options": {
+            "A": "90%",
+            "B": "100%",
+            "C": "लगभग 80% (Around 80%)",
+            "D": "50% से कम (Less than 50%)"
+        },
+        "correct": "D",
+        "explanation": "According to electrical matching theorems, a DC motor operating at maximum power transfer outputs only 50% electrical efficiency."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Functions can pass information in which of the following ways?",
+        "options": {
+            "A": "और",
+            "B": "दोनों (Both A and B)",
+            "C": "स्टैक (Stack)",
+            "D": ""
+        },
+        "correct": "D",
+        "explanation": "Functions accept parameters passed by value (copying data) or passed by reference (passing memory addresses)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What Arduino Codes are referred to?",
+        "options": {
+            "A": "स्केचेज़ (sketches)",
+            "B": "ड्राइंग्स (drawings)",
+            "C": "लिंक्स (links)",
+            "D": "नोट्स (notes)"
+        },
+        "correct": "A",
+        "explanation": "Code files written in the Arduino IDE are called sketches."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "The purpose of communication is to help officials to ______ the employees.",
+        "options": {
+            "A": "हटाना (Eliminate)",
+            "B": "प्रेरित (Motivate)",
+            "C": "धमकाना (Threaten)",
+            "D": "अवगत कराना (Apprise)"
+        },
+        "correct": "B",
+        "explanation": "Organizational communication is designed to align, inform, and motivate staff to achieve company goals."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What language is the Arduino IDE built on?",
+        "options": {
+            "A": "Java",
+            "B": "HTML",
+            "C": "C/C++",
+            "D": "Python"
+        },
+        "correct": "A",
+        "explanation": "The classic 1.x version of the Arduino IDE was developed using Java."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "While presenting using projectors, information line can be revealed by using an ______ sheet to over the ______",
+        "options": {
+            "A": "पारदर्शी, स्लाइड (Transparent, slide)",
+            "B": "स्पष्ट, पारदर्शिता (Translucent, transparency)",
+            "C": "अपारदर्शी, फ्लिप चार्ट (Opaque, flip chart)",
+            "D": "अपारदर्शी, पारदर्शिता (Opaque, transparency)"
+        },
+        "correct": "D",
+        "explanation": "Covering transparency slides with an opaque paper sheet allows presenters to reveal information line-by-line."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "A set of homogenous data stored in consecutive memory locations is called:",
+        "options": {
+            "A": "लिस्ट (List)",
+            "B": "स्ट्रक्चर (Structure)",
+            "C": "एरे (Array)",
+            "D": "यूनियन (Union)"
+        },
+        "correct": "C",
+        "explanation": "An array stores elements of the same data type in contiguous memory locations."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which rule is used to decide the direction of rotation of DC motor?",
+        "options": {
+            "A": "कूलॉम का सिद्धांत (Coulomb's Law)",
+            "B": "लेंज़ का सिद्धांत (Lenz's Law)",
+            "C": "फ्लेमिंग का दाहिना हाथ नियम (Fleming's Right-hand Rule)",
+            "D": "फ्लेमिंग का वामहस्त नियम (Fleming's Left-hand Rule)"
+        },
+        "correct": "D",
+        "explanation": "Fleming's Left-hand Rule determines the direction of magnetic force acting on a current-carrying conductor inside a motor."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following helps to collaborate in IoT development?",
+        "options": {
+            "A": "फ़िज़िकल कम्प्यूटिंग (physical computing)",
+            "B": "केमिकल कम्प्यूटिंग (chemical computing)",
+            "C": "मेकैनिज्म (mechanism)",
+            "D": "क्लाउड कम्प्यूटिंग (cloud computing)"
+        },
+        "correct": "D",
+        "explanation": "Cloud platforms enable distributed development teams to share APIs, database services, and IoT configurations."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "What is the real example of a smart grid device in IoT?",
+        "options": {
+            "A": "मोबाइल फोन (Mobile phone)",
+            "B": "टेलीवीजन (Television)",
+            "C": "स्मार्ट स्पीकर (Smart Speaker)",
+            "D": "स्मार्ट मीटर (Smart Meters)"
+        },
+        "correct": "D",
+        "explanation": "Smart meters record electrical usage in real-time and send this data to utilities for dynamic grid balancing."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Which of the following method is better for task swapping in the embedded systems?",
+        "options": {
+            "A": "टाइम स्लाइस (time slice)",
+            "B": "RMS",
+            "C": "कॉपरेटिव मल्टीटास्किंग (cooperative multitasking)",
+            "D": "प्री-एम्पटिव (pre-emptive)"
+        },
+        "correct": "D",
+        "explanation": "Pre-emptive multitasking swaps tasks based on priority instantly, ensuring real-time response for critical events."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M4-R5: Internet of Things",
+        "question": "Reports are usually utilized to present the outcome of:",
+        "options": {
+            "A": "परीक्षण (Experiment)",
+            "B": "समीक्षा (Inquiry)",
+            "C": "अन्वेषण (Investigation)",
+            "D": "ये सभी (All of these)   esko question aur answer add karo aur answer jo sahi ho to kyu sahi hia uska reason bateye aur galt hia to uksa bhi reason bateye sath me jo galat answer hai to kiska anser hai wo bhi bataye sath me o level se related sare question aur anser khud se add karde 1000 har ek subject ka \n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-20T17:17:45+05:"
+        },
+        "correct": "D",
+        "explanation": "Professional reports summarize the findings of experiments, inquiries, and investigations.\n\n---"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following is not a control structure?",
+        "options": {
+            "A": "राइट मोड / write mode",
+            "B": "रीड मोड / read mode",
+            "C": "अपेण्ड मोड / append mode",
+            "D": "उपरोक्त में से कोई नहीं / none of the above"
+        },
+        "correct": "B",
+        "explanation": "A process box represents standard calculations or assignments, whereas loops (iteration) and decisions (branching) are control structures that direct code execution flows.\n\n* *(A) Loop:* An iteration control structure.\n  * *(C) Decision:* A selection/branching control structure."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "For performing the addition of two numbers, which of the following symbol in a flow chart are used?",
+        "options": {
+            "A": "सिंटेक्स एरर / Syntax Error",
+            "B": "टाइप एरर / Type Error",
+            "C": "स्ट्रिंग एरर / String Error",
+            "D": "रन टाइम एरर / Run Time Error"
+        },
+        "correct": "C",
+        "explanation": "Rectangular boxes are used in flowcharts to represent data processing, calculations, and mathematical operations.\n\n* *(A) Control flow:* Represented by arrows connecting blocks.\n  * *(B) Terminal:* Ovals representing Start or Stop.\n  * *(D) Decision:* Diamond shape representing branch conditions."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following functions is a built-in function in python ?",
+        "options": {
+            "A": "and",
+            "B": "f.seek(10, 0)",
+            "C": "",
+            "D": ""
+        },
+        "correct": "B",
+        "explanation": "`print()` is a built-in Python function that outputs data directly to the console.\n\n* *(A) factorial():* Must be imported from the `math` module.\n  * *(C) seed():* Part of the `random` module.\n  * *(D) sqrt():* Must be imported from the `math` module."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "NumPY stands for:",
+        "options": {
+            "A": "pi",
+            "B": "अनाम / anonymous",
+            "C": "lambda",
+            "D": "उपरोक्त में से कोई नहीं / none of the above"
+        },
+        "correct": "C",
+        "explanation": "NumPy is the foundational Python library for working with arrays, representing Numerical Python."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which symbol is used as a flowline to connect two blocks in a flow chart ?",
+        "options": {
+            "A": "def fun1(kwargs)",
+            "B": "def fun1(*args)",
+            "C": "No, it is not possible in Python",
+            "D": "def fun1(*data)"
+        },
+        "correct": "A",
+        "explanation": "Arrows denote the flow sequence and direct the reader from one block to the next."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Choose the correct function declaration of fun1() so that we can execute: fun1(25,75,55) and fun1(10,20)",
+        "options": {
+            "A": "टास्क मैनेजर / Task Manager",
+            "B": "टास्क बार / Task Bar",
+            "C": "प्रोग्राम मैनेजर / Program Manager",
+            "D": "डिवाइस ड्राईवर / Device Driver"
+        },
+        "correct": "B",
+        "explanation": "The `*` prefix (args or data) acts as a variable-length positional argument unpacker, allowing a function to accept any number of inputs.\n\n* *(A) kwargs:* Standard double asterisk `**kwargs` is used for variable key-value pairs (dictionaries)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following symbols is used to represent output in a flow chart?",
+        "options": {
+            "A": "abc",
+            "B": "5",
+            "C": "{\"abc\":5}",
+            "D": "Error"
+        },
+        "correct": "C",
+        "explanation": "Parallelograms are standardized flowchart symbols used to display Input and Output actions."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which statement will return one line from a file (file object is 'f') ?",
+        "options": {
+            "A": "_x = 2",
+            "B": "x = 3",
+            "C": "_xyz_ = 5",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "B",
+        "explanation": "`readline()` reads and returns characters up to the next newline (`\n`) character.\n\n* *(A) readlines():* Returns a list of all lines in the file.\n  * *(C) read():* Reads the entire file content as a single block."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "____ function returns the current position of file pointer.",
+        "options": {
+            "A": "_val",
+            "B": "val",
+            "C": "try",
+            "D": "try"
+        },
+        "correct": "B",
+        "explanation": "`tell()` returns the integer byte position of the cursor inside the open file stream.\n\n* *(C) seek():* Shifts the file pointer to a new location."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following code snippet? `print([i.lower() for i in \"HELLO\"])`",
+        "options": {
+            "A": "count()",
+            "B": "upper()",
+            "C": "strip()",
+            "D": "उपरोक्त सभी / All of the above"
+        },
+        "correct": "B",
+        "explanation": "The list comprehension lowercases each character in the string \"HELLO\" and stores the characters in a new list."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Structured program can be broken into _____ to assign to more than one developer.",
+        "options": {
+            "A": "फाइल का नाम / File Name",
+            "B": "फाइल हैंडल / File Handle",
+            "C": "फाइल का मोड / Mode of file",
+            "D": "फाइल हैंडलिंग / File Handling"
+        },
+        "correct": "B",
+        "explanation": "Modular programming breaks code into separate components to enable parallel teamwork and isolate functionality."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following pseudo code ?",
+        "options": {
+            "A": "k ^ 1",
+            "B": "k  1",
+            "C": "k ^^ 1",
+            "D": "k ^* 1"
+        },
+        "correct": "B",
+        "explanation": "1. `a - 6 = 10 - 6 = 4`. So `a = 10 % 4 = 2`.\n  2. `b - 2 = 5 - 2 = 3`. So `b = 5 % 3 = 2`.\n  3. `a - b = 2 - 2 = 0`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What does readlines() method return ?",
+        "options": {
+            "A": "सभी एलिमेंट के साथ एक मैट्रिक्स 0 बनाने के लिए / To make a Matrix with all element 0",
+            "B": "सभी डायगोनल एलिमेंट के साथ एक मैट्रिक्स 0 बनाने के लिए / To make a Matrix with all diagonal element 0",
+            "C": "पहली पंक्ति के साथ एक मैट्रिक्स 0 बनाने के लिए / To make a Matrix with first row 0",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "D",
+        "explanation": "`readlines()` outputs a list of strings containing all lines in the file."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following pseudo code, where & represent AND operation ?",
+        "options": {
+            "A": "val",
+            "B": "raise",
+            "C": "try",
+            "D": "with"
+        },
+        "correct": "A",
+        "explanation": "* `5` in binary is `101`.\n  * `1` in binary is `001`.\n  * Bitwise AND: `101 & 001 = 001`, which is `1`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following code ?",
+        "options": {
+            "A": "(2, 3)",
+            "B": "(3, 2)",
+            "C": "(1, 1)",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "B",
+        "explanation": "1. `c = a + b = [1, 5, 7, 7, 9]`\n  2. `c = c * a = [1, 10, 21, 35, 72]`\n  3. Index `2` (the 3rd element) is `21`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of following code?",
+        "options": {
+            "A": "[7, 19, 45, 89]",
+            "B": "[2, 4, 22, 72]",
+            "C": "[4, 7, 19, 2, 89, 45, 72, 22]",
+            "D": "[2, 4, 7, 19, 22, 45, 72, 89]"
+        },
+        "correct": "A",
+        "explanation": "The shape property returns matrix dimensions (Rows, Columns). This is a 2D array with 2 rows and 3 columns."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is 'f' in the following statement? `f = open(\"Data.txt\", \"r\")`",
+        "options": {
+            "A": "'m+nl'",
+            "B": "'mnl'",
+            "C": "'m nl'",
+            "D": "'m'"
+        },
+        "correct": "B",
+        "explanation": "`f` is the variable representing the file stream wrapper object returned by `open()`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Python supports the creation of anonymous functions at runtime, using a construct called _____",
+        "options": {
+            "A": "212 / 32",
+            "B": "9 / 27",
+            "C": "567 / 98",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "C",
+        "explanation": "`lambda` keyword defines anonymous inline functions in Python."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following code ?",
+        "options": {
+            "A": "del dic[\"tiger\"]",
+            "B": "dic[\"tiger\"].delete()",
+            "C": "delete(dic.[\"tiger\"])",
+            "D": "del(dic.[\"tiger\"])"
+        },
+        "correct": "A",
+        "explanation": "`range(4)` generates `0, 1, 2, 3`. String replication `'b' * x` produces an empty string for `0`, one 'b' for `1`, two for `2`, and three for `3`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following code ?",
+        "options": {
+            "A": "रैम / RAM",
+            "B": "सीपीयू / CPU",
+            "C": "रोम / ROM",
+            "D": "कण्ट्रोल यूनिट / Control Unit"
+        },
+        "correct": "A",
+        "explanation": "The `ndim` property outputs the dimension size. Since it is a flat list/vector, it has 1 dimension."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "The brain of computer system is _____",
+        "options": {
+            "A": "int",
+            "B": "array",
+            "C": "tuple",
+            "D": "list"
+        },
+        "correct": "B",
+        "explanation": "The CPU (Central Processing Unit) directs all operational logic."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following is a valid arithmetic operator in Python?",
+        "options": {
+            "A": "टुपल्स की सूची / List of tuples",
+            "B": "सूचियों के टुपल्स / Tuples of lists",
+            "C": "टुपल्स की सरणी / Array of tuples",
+            "D": "अमान्य प्रकार / Invalid type"
+        },
+        "correct": "A",
+        "explanation": "`//` is the floor division operator.\n\n* *(C) <:* Comparison operator.\n  * *(D) and:* Logical operator."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be output for the following code?",
+        "options": {
+            "A": "int 32",
+            "B": "int",
+            "C": "float",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "C",
+        "explanation": "The `size` attribute returns the total count of elements inside the multidimensional array ($2 \times 3 = 6$)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "The sequence logic will not be used while _____",
+        "options": {
+            "A": "write",
+            "B": "writelines",
+            "C": "dump",
+            "D": "pickle"
+        },
+        "correct": "B",
+        "explanation": "Comparison requires branching (selection/decision logic), whereas math operations and writing output lines are sequential."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of following?",
+        "options": {
+            "A": "स्टेटमेंट / Statement",
+            "B": "प्रोग्राम / Program",
+            "C": "फ्लोचार्ट / Flow chart",
+            "D": "उपरोक्त सभी / All the above"
+        },
+        "correct": "C",
+        "explanation": "Sorting relies on relational comparisons (`<`). Python does not allow complex numbers (`5J`) to be compared against integers, raising a `TypeError`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which function is used to write data in binary mode?",
+        "options": {
+            "A": "klmn klmn klmn klmn",
+            "B": "k",
+            "C": "kkk",
+            "D": "इनमें से कोई नहीं / None of the these"
+        },
+        "correct": "C",
+        "explanation": "`pickle.dump(obj, file)` serializes and writes python objects to a binary file stream."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "To use a module in another module, you must import it using an _____ statement.",
+        "options": {
+            "A": "2 3 -3",
+            "B": "3 4 -3 3",
+            "C": "2 3 -3 3",
+            "D": "2 3 -3 -"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) import**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following declarations is incorrect ?",
+        "options": {
+            "A": "(5,1,6,2)",
+            "B": "(5,1,7,6)",
+            "C": "(5,1,7,6,2)",
+            "D": "Error"
+        },
+        "correct": "D",
+        "explanation": "All names (`x = 2`, `x = 3`, `_xyz_ = 5`) are valid variable identifier styles in Python."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "A _____ statement is used when a statement is required syntactically but you do not want any code to execute.",
+        "options": {
+            "A": "दो संख्याओं को घटाने / Subtracting two numbers",
+            "B": "दो डेटा मानों की तुलना करने / Comparing two data values",
+            "C": "उपयोगकर्ता को आउटपुट प्रदान करने / Providing output to the user",
+            "D": "दो नंबर जोड़ने / Adding two numbers"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) pass**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is a variable defined outside a function referred to as ?",
+        "options": {
+            "A": "Option A",
+            "B": "Option B",
+            "C": "Option C",
+            "D": "Option D"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) A global variable**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Kite/diamond symbol in flow chart is used for _____",
+        "options": {
+            "A": "Error",
+            "B": "6",
+            "C": "4",
+            "D": "3"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) Decision**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the datatype of x ?",
+        "options": {
+            "A": "a is 13 and b is 15 and c is 10 / a is 2 and b is 5 and c is 4 / a is 5 and b is 7 and c is 9",
+            "B": "a is 13 and b is 17 and c is 10 / a is 2 and b is 4 and c is 4 / a is 5 and b is 9 and c is 7",
+            "C": "a is 13 and b is 17 and c is 10 / a is 2 and b is 5 and c is 4 / a is 5 and b is 7 and c is 9",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "D",
+        "explanation": "`.tolist()` casts the NumPy array into a standard Python list."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "f.read(5) will read _____ from a file (file object 'f').",
+        "options": {
+            "A": "f.reads()",
+            "B": "f.read()",
+            "C": "f.read(all)",
+            "D": "f.read(*)"
+        },
+        "correct": "A",
+        "explanation": "Standard text mode `read(n)` reads exactly `n` characters from the cursor position."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "जावा / Java",
+            "B": "C",
+            "C": "PHP",
+            "D": "उपरोक्त सभी / All of the above"
+        },
+        "correct": "C",
+        "explanation": "Lists are mutable and variables hold references to the object. `list2` points to the same object as `list1`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of following statement ? `>>>\"m\" + \"nl\"`",
+        "options": {
+            "A": "and",
+            "B": "",
+            "C": "",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) 'mnl'**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Choose the correct option with respect to Python.",
+        "options": {
+            "A": "4",
+            "B": "0",
+            "C": "1",
+            "D": "8"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) Tuples are immutable while lists are mutable**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following code snippet ?",
+        "options": {
+            "A": "{'c'}",
+            "B": "{'a', 'b', 'c', 'd', 'e', 'f'}",
+            "C": "{c}",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "B",
+        "explanation": "`d` is a set. The loop iterates through set values and prints each value."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Flow charts and Algorithms are used for _____",
+        "options": {
+            "A": "1",
+            "B": "5",
+            "C": "6",
+            "D": "4"
+        },
+        "correct": "D",
+        "explanation": "* **Correct Answer:** **(D) All the above**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "A _____ stores information in the form of a stream of ASCII or unicode characters i.e. human readable.",
+        "options": {
+            "A": "10",
+            "B": "21",
+            "C": "12",
+            "D": "28"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) Text file**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will following code segment print?",
+        "options": {
+            "A": "3",
+            "B": "",
+            "C": "0",
+            "D": "error"
+        },
+        "correct": "B",
+        "explanation": "1. `True or True` is true, so we enter the block.\n  2. `False and True or False` is `False`.\n  3. `False and False or True and True` is evaluated as `(False) or (True)`, which is `True`. So it prints 'B'."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "In python language, which of the following operators is the correct option for raising k to the power 1?",
+        "options": {
+            "A": "[1, 4]",
+            "B": "[1, 3, 4]",
+            "C": "[4, 3]",
+            "D": "[1, 3]"
+        },
+        "correct": "D",
+        "explanation": "* **Correct Answer:** **(D) k**1** (Note: Exponentiation is done via `**`. If a typo exists in the test paper, it represents `k**1`)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "['', 'b', 'bb', 'bbb']",
+            "B": "['b', 'bb', 'bbb', 'bbbb']",
+            "C": "['b', 'bb', 'bbb']",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "C",
+        "explanation": "`rfind()` searches from right to left, returning the highest matching index position."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following is not an advantage of using modules ?",
+        "options": {
+            "A": "5 वर्ण / 5 characters",
+            "B": "5 शब्द / 5 words",
+            "C": "5 पंक्तियाँ / 5 lines",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "C",
+        "explanation": "Splitting code into modules does not decrease the size of files/packages."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of following Python code ? `>>>print(5*(2//3))`",
+        "options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        },
+        "correct": "C",
+        "explanation": "`2//3` returns `0` (integer division). $5 \times 0 = 0$."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be output for the following code ?",
+        "options": {
+            "A": "कण्ट्रोल फ्लो / Control flow",
+            "B": "टर्मिनल / Terminal",
+            "C": "प्रोसेसिंग / Processing",
+            "D": "डिसिजन / Decision"
+        },
+        "correct": "B",
+        "explanation": "```python\nimport numpy as np\na = np.array([1,2,3,5,8])\nprint (a.ndim)\n```\n* **Correct Answer:** **(B) 1**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following are valid string manipulation functions in Python?",
+        "options": {
+            "A": "[4, 5, 6]",
+            "B": "[7]",
+            "C": "[1, 2, 3, 4]",
+            "D": "7"
+        },
+        "correct": "D",
+        "explanation": "* **Correct Answer:** **(D) All of the above**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "2",
+            "B": "1",
+            "C": "0",
+            "D": "कोई नहीं / none"
+        },
+        "correct": "B",
+        "explanation": "```python\nfrom math import *\nfloor(11.7)\n```\n* **Correct Answer:** **(B) 11**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which statement will move file pointer 10 bytes backward from current position?",
+        "options": {
+            "A": "14",
+            "B": "1",
+            "C": "3",
+            "D": "2"
+        },
+        "correct": "C",
+        "explanation": "`whence = 1` starts from the current pointer location."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following error is returned when we try to open a file in write mode which does not exist?",
+        "options": {
+            "A": "नंबरिंग पाइथन / Numbering Python",
+            "B": "नंबर इन पाइथन / Number In Python",
+            "C": "नुमेरिकल पाइथन / Numerical Python",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "D",
+        "explanation": "Opening a file in `\"w\"` mode creates the file automatically instead of raising an error."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following algorithm for a = 5, b = 8, c = 6 ?",
+        "options": {
+            "A": "सर्किल / Circle",
+            "B": "समान्तरचतुर्भुज / Parallelogram",
+            "C": "डायमंड / Diamond",
+            "D": "उपरोक्त सभी / All the above"
+        },
+        "correct": "A",
+        "explanation": "The comparisons nested in the algorithm resolve to `5 < 8` and `5 < 6`, displaying `a` as the smallest."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following error is returned by the given code?",
+        "options": {
+            "A": "क्विक रिस्पांस कोड / Quick response code",
+            "B": "उसी प्रारूप में जिसमें डेटा को मेमोरी में रखा जाता है / Same format in which the data is held in memory",
+            "C": "एएससीआईआई प्रारूप / ASCII format",
+            "D": "यूनिकोड प्रारूप / Unicode format"
+        },
+        "correct": "B",
+        "explanation": "`f.write()` only accepts string arguments. Passing `345` (int) raises a `TypeError`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "In which format Binary file contains information?",
+        "options": {
+            "A": "f.readlines()",
+            "B": "f.readline()",
+            "C": "f.read()",
+            "D": "f.line()"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) Same format in which the data is held in memory**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "स्टैक / stack",
+            "B": "मैक्रो / macro",
+            "C": "माइक्रो / micro",
+            "D": "यूनियन / union"
+        },
+        "correct": "D",
+        "explanation": "Since `factorial` was imported directly, calling `math.factorial` throws a `NameError`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following words is not a keyword of python language?",
+        "options": {
+            "A": "and",
+            "B": "",
+            "C": "",
+            "D": "उपरोक्त में से कोई नहीं / none of the above"
+        },
+        "correct": "A",
+        "explanation": "`val` is not a keyword in Python (used in languages like Kotlin/Scala)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which function is used to add an element (5) in the list1?",
+        "options": {
+            "A": "120",
+            "B": "कुछ भी प्रिन्ट नहीं होगा / Nothing is printed",
+            "C": "एरर, मेथड फ़ैक्टोरियल मैथ मोड्यूल मे एकसिस्ट नहीं करता / Error, method factorial doesn't exist in math module",
+            "D": "एरर, स्टेटमेंट होनी चाहिए: print (factorial(5)) / Error, the statement should be: print(factorial(5))"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) list1.append(5)**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following?",
+        "options": {
+            "A": ".py",
+            "B": ".pyth",
+            "C": ".python",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "A",
+        "explanation": "```python\ny = 'klmn'\nfor i in range(len(y)):\n    print(y)\n```\n* **Correct Answer:** **(A) klmn klmn klmn klmn** (printed on 4 separate lines)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following software is required to run the hardware ?",
+        "options": {
+            "A": "कोलन / colon",
+            "B": "कॉमा / comma",
+            "C": "सेमीकोलन / semicolon",
+            "D": "हाईपन / hyphen"
+        },
+        "correct": "D",
+        "explanation": "* **Correct Answer:** **(D) Device Driver**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "In which of the following, data is stored permanently?",
+        "options": {
+            "A": "0120",
+            "B": "012",
+            "C": "00102",
+            "D": "error"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) File**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "In which software development phase quality of software is documented ?",
+        "options": {
+            "A": "A",
+            "B": "B",
+            "C": "C",
+            "D": "D"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) Testing**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the use of the zeros() function in Numpy array in python ?",
+        "options": {
+            "A": "1 2 3",
+            "B": "123",
+            "C": "Error",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) To make a Matrix with all element 0**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "प्रोग्राम कोड के पुनः उपयोग का एक साधन प्रदान करता है / Provides a means of reuse of program code",
+            "B": "कार्यों को विभाजित करने का एक साधन प्रदान करता है / Provides a means of dividing up tasks",
+            "C": "प्रोग्राम के आकार को कम करने का एक साधन प्रदान करता है / Provides a means of reducing the size of the program",
+            "D": "प्रोग्राम के अलग-अलग हिस्सों के परीक्षण का एक साधन प्रदान करता है / Provides a means of testing individual parts of the program"
+        },
+        "correct": "D",
+        "explanation": "```python\nx = 'abcd'\nfor i in x:\n    print(i.upper())\n```\n* **Correct Answer:** **(D) ABCD** (printed on 4 separate lines)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Recursive function is:",
+        "options": {
+            "A": "टेस्टिंग / Testing",
+            "B": "डेलीवेरी / Delivery",
+            "C": "आइडिया / Idea",
+            "D": "विकास / Development"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) A function that calls itself**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which mode creates a new file if the file does not exist?",
+        "options": {
+            "A": "सेग्मेंट्स / Segments",
+            "B": "मौडूल्स / Modules",
+            "C": "यूनिट्स / Units",
+            "D": "उपरोक्त सभी / All the above"
+        },
+        "correct": "D",
+        "explanation": "* **Correct Answer:** **(D) Both (A) and (C)** (both write and append modes create files automatically)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following code snippet?",
+        "options": {
+            "A": "12",
+            "B": "11",
+            "C": "",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "A",
+        "explanation": "* `int(2.19) = 2`\n  * `floor(3.999999) = 3`\n  * `ceil(-3.30) = -3`\n  * `fabs(-3.30) = 3.3` (absolute float value)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What type of data is arr = [(1, 1), (2, 2), (3, 3)] ?",
+        "options": {
+            "A": "factorial()",
+            "B": "print()",
+            "C": "seed()",
+            "D": "sqrt()"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) List of tuples**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "In python language, which of the following cannot be defined as variable ?",
+        "options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        },
+        "correct": "C",
+        "explanation": "`try` is a reserved keyword in Python for exception handling."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be output for the following code?",
+        "options": {
+            "A": "वेरिएबल / Variable",
+            "B": "फाइल / File",
+            "C": "उपरोक्त दोनों / Both of the above",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "D",
+        "explanation": "Adding `1` increment all elements: `[2, 3, 4, 6, 9]`. Element at index `1` is `3`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following code?",
+        "options": {
+            "A": "6 4",
+            "B": "4 6",
+            "C": "4 4",
+            "D": "6 6"
+        },
+        "correct": "A",
+        "explanation": "The `&` operator computes set intersection, returning shared elements."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following will delete key-value pair for key=\"tiger\" in dictionary?",
+        "options": {
+            "A": "zzz",
+            "B": "zz",
+            "C": "Infinite loop",
+            "D": "An exception is thrown"
+        },
+        "correct": "A",
+        "explanation": "```python\ndic = {\"lion\":\"wild\", \"tiger\":\"wild\", \"cat\":\"domestic\", \"dog\":\"domestic\"}\n```\n* **Correct Answer:** **(A) del dic[\"tiger\"]**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the value of the following Python code ? `>>>print(36/4)`",
+        "options": {
+            "A": "hello",
+            "B": "['h', 'e', 'l', 'l', 'o']",
+            "C": "hel",
+            "D": "HELLO"
+        },
+        "correct": "C",
+        "explanation": "Single division `/` returns a floating-point number."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Debugging is the process of fixing a _____ in the software.",
+        "options": {
+            "A": "and",
+            "B": "",
+            "C": "",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) bug**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following? `print(sum(1,2,3))`",
+        "options": {
+            "A": "Error",
+            "B": "6",
+            "C": "1",
+            "D": "3"
+        },
+        "correct": "A",
+        "explanation": "The `sum()` built-in accepts an iterable (list/tuple) as its argument, not separate integers."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following?",
+        "options": {
+            "A": "try",
+            "B": "ब्रैकेट्स / Brackets",
+            "C": "इंडेंटेशन / Indentation",
+            "D": "कैच / Catch"
+        },
+        "correct": "B",
+        "explanation": "```python\nn = 5\nwhile n > 0:\n    n -= 1\n    if n == 2:\n        continue\n    print(n)\n```\n* **Correct Answer:** **(B) 4 3 1 0** (printed on separate lines)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following? `print(max([1, 2, 3, 4], [4, 5, 6], [7]))`",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "0"
+        },
+        "correct": "B",
+        "explanation": "List comparisons check values index-by-index. Comparing first indices (`1`, `4`, `7`), `7` is the highest, returning `[7]`."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Pictorial representation of an algorithm is called as _____",
+        "options": {
+            "A": "कर्ली ब्रेसेस / Curly Braces",
+            "B": "राउंड ब्रैकेट / Round Brackets",
+            "C": "आईडेंटेशन / Indentation",
+            "D": "सेमीकोलन / Semicolon"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) Flow chart**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which statement is correct to import all modules from the package ?",
+        "options": {
+            "A": "एक स्थिर वेरिएबल / A static variable",
+            "B": "एक वैश्विक वेरिएबल / A global variable",
+            "C": "एक स्थानीय वेरिएबल / A local variable",
+            "D": "एक स्वचालित वेरिएबल / An automatic variable"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) from package import ***"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following?",
+        "options": {
+            "A": "[2, 6, 5J]",
+            "B": "[5J, 2, 6]",
+            "C": "Error",
+            "D": "[6, 5J, 2]"
+        },
+        "correct": "B",
+        "explanation": "The `else` block only runs if the loop ends normally. Since the loop is stopped by a `break` at `3`, `else` is skipped."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "When we open file in append mode the file pointer is at the _____ of the file.",
+        "options": {
+            "A": "निष्पादन / Execution",
+            "B": "डिसिजन / Decision",
+            "C": "स्टेटमेंट / Statement",
+            "D": "उपरोक्त सभी / All of the above"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) end**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following expression? `x = 14; print(x >> 2)`",
+        "options": {
+            "A": "a सबसे छोटी संख्या है / a is the smallest number",
+            "B": "b सबसे छोटी संख्या है / b is the smallest number",
+            "C": "c सबसे छोटी संख्या है / c is the smallest number",
+            "D": "stop"
+        },
+        "correct": "C",
+        "explanation": "$14$ is `1110` in binary. Shifting right by 2 yields `0011` ($3$)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "The contents inside the \"for loop\" are separated by:",
+        "options": {
+            "A": "1",
+            "B": "2",
+            "C": "4",
+            "D": "5"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) colon** (the loop definition header ends with a colon `:`)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following code?",
+        "options": {
+            "A": "break",
+            "B": "pass",
+            "C": "continue",
+            "D": "इनमें से कोई नहीं / none of these"
+        },
+        "correct": "C",
+        "explanation": "Integers are immutable in Python. The value of `n2` does not change outside the function context."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which one of the following is immutable data type?",
+        "options": {
+            "A": "वर्ग / Square",
+            "B": "सर्किल / Circle",
+            "C": "समान्तरचतुर्भुज / Parallelogram",
+            "D": "त्रिकोण / Triangle"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) tuple**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "लिस्ट / list",
+            "B": "सेट / set",
+            "C": "tuple",
+            "D": "dict"
+        },
+        "correct": "C",
+        "explanation": "```python\ndef func(a, b=5, c=10):\n    print('a is', a, 'and b is', b, 'and c is', c)\n\nfunc(13, 17)\nfunc(a=2, c=4)\nfunc(5, 7, 9)\n```\n* **Correct Answer:** **(C)**\n  `a is 13 and b is 17 and c is 10`\n  `a is 2 and b is 5 and c is 4`\n  `a is 5 and b is 7 and c is 9`"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following code snippet ?",
+        "options": {
+            "A": "शब्दकोश / Dictionary",
+            "B": "स्ट्रिंग / String",
+            "C": "टपल / Tuple",
+            "D": "लिस्ट / List"
+        },
+        "correct": "A",
+        "explanation": "```python\nnumbers = (4, 7, 19, 2, 89, 45, 72, 22)\nsorted_numbers = sorted(numbers)\nodd_numbers = [x for x in sorted_numbers if x % 2 != 0]\nprint(odd_numbers)\n```\n* **Correct Answer:** **(A) [7, 19, 45, 89]**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following is used to define a block of code in Python language?",
+        "options": {
+            "A": "कम्पाइलर / Compiler",
+            "B": "इंटरप्रेटर / Interpreter",
+            "C": "असेम्बलर / Assembler",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) Indentation**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which of the following will read entire content of file (file object 'f')?",
+        "options": {
+            "A": "एरो / arrow",
+            "B": "सर्किल / circle",
+            "C": "बॉक्स / box",
+            "D": "समान्तरचतुर्भुज / parallelogram"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) f.read()**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "The connector symbol for flow chart is _____",
+        "options": {
+            "A": "1",
+            "B": "3",
+            "C": "5",
+            "D": "7"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) Circle**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Python is written in _____",
+        "options": {
+            "A": "get()",
+            "B": "tell()",
+            "C": "seek()",
+            "D": "cur()"
+        },
+        "correct": "B",
+        "explanation": "* **Correct Answer:** **(B) C**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "list1.sum(5)",
+            "B": "list1.add(5)",
+            "C": "list1.append(5)",
+            "D": "list1.addelement(5)"
+        },
+        "correct": "D",
+        "explanation": "```python\nd1 = {\"abc\":5, \"def\":6, \"ghi\":7}\nprint(d1[0])\n```\n* **Correct Answer:** **(D) Error** (Dictionary keys are not indexable. Accessing `0` raises a `KeyError`)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ? `len([\"hello\", 2, 4, 6])`",
+        "options": {
+            "A": "aBCD",
+            "B": "abcd",
+            "C": "error",
+            "D": "ABCD"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) 4**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "The correct extension of the Python file is _____",
+        "options": {
+            "A": "//",
+            "B": "?",
+            "C": "<",
+            "D": "and"
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) .py**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "from package import all",
+            "B": "from package import *",
+            "C": "from package include all",
+            "D": "from package include *"
+        },
+        "correct": "A",
+        "explanation": "```python\ndef display(b, n):\n    while n > 0:\n        print(b, end=\"\")\n        n = n - 1\n\ndisplay('z', 3)\n```\n* **Correct Answer:** **(A) zzz**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be output for the following code ?",
+        "options": {
+            "A": "File Found Error",
+            "B": "File Not Exist Error",
+            "C": "File Not Found Error",
+            "D": "उपरोक्त में से कोई नहीं / None of the above"
+        },
+        "correct": "D",
+        "explanation": "```python\nimport numpy as np\na = np.array([2, 3, 4, 5])\nprint(a.dtype)\n```\n* **Correct Answer:** **(D) None of these** (typically returns platform-dependent representation like `int64` or `int32`, which are not explicitly matching options (A) or (B))."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Given a string x=\"hello\" What is the output of x.count('l') ?",
+        "options": {
+            "A": "9",
+            "B": "4",
+            "C": "",
+            "D": ""
+        },
+        "correct": "A",
+        "explanation": "* **Correct Answer:** **(A) 2**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "A detailed flow chart is called as _____",
+        "options": {
+            "A": "लूप / Loop",
+            "B": "प्रोसेस / Process",
+            "C": "डिसिजन / Decision",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) micro**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Which translator is used to convert assembly language into machine language ?",
+        "options": {
+            "A": "5 4 3 1 0",
+            "B": "4 3 1 0",
+            "C": "4 3 2",
+            "D": "इनमें से कोई नहीं / None of these"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) Assembler**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What is the output of the following?",
+        "options": {
+            "A": "फ़ाइल के बीच में कहीं भी / anywhere in between the file",
+            "B": "अंत / end",
+            "C": "आरम्भ में / beginning",
+            "D": "फ़ाइल की दूसरी पंक्ति / second line of the file"
+        },
+        "correct": "C",
+        "explanation": "```python\nx = 123\nfor i in x:\n    print(i)\n```\n* **Correct Answer:** **(C) Error** (Integers are not iterable objects)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "बेहतर प्रोग्रामिंग / Better Programming",
+            "B": "अनुकूलित कोडिंग / Optimized Coding",
+            "C": "व्यवस्थित परीक्षण / Systematic testing",
+            "D": "उपरोक्त सभी / All the above"
+        },
+        "correct": "D",
+        "explanation": "```python\ntuple1 = (5, 1, 7, 6, 2)\ntuple1.pop(2)\nprint(tuple1)\n```\n* **Correct Answer:** **(D) Error** (Tuples are immutable and do not have a `.pop()` attribute)."
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "Hierarchy in a pseudo-code can be shown by:",
+        "options": {
+            "A": "टुपल्स और लिस्ट्स दोनों अपरिवर्तनीय हैं / Both tuples and lists are immutable",
+            "B": "टुपल्स अपरिवर्तनीय हैं जबकि लिस्ट्स परिवर्तनशील हैं / Tuples are immutable while lists are mutable",
+            "C": "टुपल्स और लिस्ट्स दोनों परिवर्तनशील हैं / Both tuples and lists are mutable",
+            "D": "टुपल्स परिवर्तनशील होते हैं जबकि लिस्ट्स अपरिवर्तनीय होती हैं / Tuples are mutable while lists are immutable"
+        },
+        "correct": "C",
+        "explanation": "* **Correct Answer:** **(C) Indentation**"
+    },
+    {
+        "subject": "Computer Science",
+        "topic": "M3-R5: Python Programming",
+        "question": "What will be the output of the following Python code ?",
+        "options": {
+            "A": "{3, 4, 5} {3, 4, 5} {3, 4, 5}",
+            "B": "3 4 5",
+            "C": "Syntax Error",
+            "D": "उपरोक्त में से कोई नहीं / None of the above  esko bhi\n</USER_REQUEST>\n<ADDITIONAL_METADATA>\nThe current local time is: 2026-06-20T17:50:20+05:"
+        },
+        "correct": "B",
+        "explanation": "`power(3)` computes $3^2 = 9$. `power(3,3)` computes $3^3 = 27$.\n\n\n---"
     }
 ]
