@@ -30,6 +30,10 @@ jobs:
         with:
           gradle-version: 8.5
 
+      - name: Install Android Build Tools
+        run: |
+          yes | sdkmanager "build-tools;33.0.2" "platforms;android-33"
+
       - name: Install Cordova CLI
         run: npm install -g cordova
 
