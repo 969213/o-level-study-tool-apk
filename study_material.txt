@@ -1,0 +1,53 @@
+=== SUBJECT: Physics ===
+=== TOPIC: Electric Circuits ===
+
+Q: What is the unit of electric current?
+A) Volt
+B) Ohm
+C) Ampere
+D) Watt
+CORRECT: C
+EXPLANATION: Ampere is the SI unit of electric current, defined as one coulomb of charge passing through a point in one second. Volt is for potential difference, Ohm for resistance, and Watt for power.
+
+Q: Which formula represents Ohm's Law?
+A) P = VI
+B) V = IR
+C) R = V/I
+D) Q = It
+CORRECT: B
+EXPLANATION: Ohm's Law states that the current through a conductor between two points is directly proportional to the voltage across the two points, which is mathematically represented as V = IR (Voltage = Current * Resistance).
+
+Q: What device is used to measure electric current in a circuit?
+A) Voltmeter
+B) Ammeter
+C) Ohmmeter
+D) Galvanometer
+CORRECT: B
+EXPLANATION: An ammeter is connected in series in a circuit to measure the flow of electric current in amperes. A voltmeter measures voltage in parallel, and an ohmmeter measures electrical resistance.
+
+=== SUBJECT: Computer Science ===
+=== TOPIC: Data Representation ===
+
+Q: What is the binary representation of the decimal number 13?
+A) 1100
+B) 1101
+C) 1011
+D) 1111
+CORRECT: B
+EXPLANATION: To convert 13 to binary: 13 / 2 = 6 remainder 1; 6 / 2 = 3 remainder 0; 3 / 2 = 1 remainder 1; 1 / 2 = 0 remainder 1. Reading the remainders from bottom to top, we get 1101.
+
+Q: Which of the following is a primary storage device?
+A) Hard Disk Drive (HDD)
+B) Solid State Drive (SSD)
+C) Random Access Memory (RAM)
+D) USB Flash Drive
+CORRECT: C
+EXPLANATION: Random Access Memory (RAM) is primary storage because it is directly accessed by the CPU to read and write data during active operations. HDDs, SSDs, and USB drives are secondary storage.
+
+Q: What is the hexadecimal equivalent of the binary number 10101111?
+A) AF
+B) 9F
+C) A7
+D) BE
+CORRECT: A
+EXPLANATION: Divide the 8-bit binary number into two 4-bit nibbles: 1010 and 1111. 1010 in decimal is 10, which is 'A' in hex. 1111 in decimal is 15, which is 'F' in hex. Together, they make AF.
