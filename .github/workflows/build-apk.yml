@@ -47,7 +47,7 @@ jobs:
 
       - name: Create Cordova App & Compile APK
         run: |
-          cordova create my_app com.olevel.study OLevelApp
+          cordova create my_app com.olevel.study Study
           rm -rf my_app/www/*
           cp index.html style.css app.js questions.json manifest.json sw.js icon-192.png icon-512.png my_app/www/
           cd my_app

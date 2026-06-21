@@ -1,6 +1,6 @@
 {
-  "name": "O-Level Smart Study App",
-  "short_name": "O-Level Prep",
+  "name": "Study",
+  "short_name": "Study",
   "description": "Smart study revision tool for O-Level students with offline database and stealth features.",
   "start_url": "index.html",
   "display": "standalone",
